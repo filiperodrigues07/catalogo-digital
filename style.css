@@ -1,0 +1,339 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center; /* Centraliza o texto no corpo */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #075e54;
+    color: rgb(247, 255, 247);
+    padding: 20px;
+    display: flex; /* Use flexbox para o header */
+    align-items: center; /* Centraliza verticalmente os itens */
+    position: relative; /* Para posicionar elementos absolutos */
+}
+
+/* Logo no canto esquerdo */
+header .logo {
+    width: 150px; /* Mantém o tamanho original do logo */
+    margin-left: 15px;
+    margin-top: 10px; /* Adiciona uma margem superior para espaçamento */
+}
+
+/* Centralizando o título e a barra de pesquisa */
+.header-content {
+    display: flex; /* Use flexbox para o container */
+    flex-direction: column; /* Alinha o título e a barra de pesquisa verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    margin-left: auto; /* Empurra o container para a direita */
+    margin: 0 auto;
+    width: 40%;
+}
+
+/* Título centralizado no header */
+.title {
+    margin: 0; /* Remove margens padrão */
+    font-size: 24px; /* Define o tamanho da fonte do título */
+}
+
+/* Barra de pesquisa centralizada */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Define a largura da barra de pesquisa */
+    margin: 10px 0; /* Centraliza a barra de pesquisa horizontalmente */
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-button i {
+    font-size: 11px;
+}
+
+/* Opções de usuário (login e carrinho) */
+.user-options {
+    position: absolute;
+    top: 10px; /* Coloca no topo do canto direito */
+    right: 20px; /* Coloca no canto direito */
+    display: flex;
+    align-items: center;
+}
+
+.login-link {
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(247, 255, 247);
+}
+
+.cart-link {
+    position: relative;
+    font-size: 20px;
+    color: rgb(247, 255, 247);
+    text-decoration: none;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+}
+
+/* Estilo da barra de navegação de categorias */
+.category-nav {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.category-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Distribui os itens igualmente */
+}
+
+.category-nav li {
+    display: inline;
+}
+
+.category-nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.category-nav a.active, .category-nav a:hover {
+    background-color: #075e54;
+    color: white;
+}
+
+/* Estilo da seção de produtos */
+.menu {
+    display: flex;
+    justify-content: space-around; /* Distribui os itens igualmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem para múltiplas linhas */
+    margin: 20px;
+}
+
+/* Estilo dos produtos */
+.product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 290px;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Alinha os itens do produto verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    color: #555;
+}
+
+.product span {
+    display: block;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #075e54;
+}
+
+.product .add-to-cart, 
+.product .ver-detalhes {
+    margin-top: 10px; /* Adiciona uma margem superior para espaçamento */
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #075e54;
+}
+
+/* Ícone de carrinho no botão */
+button i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+button .fas.fa-shopping-cart {
+    font-size: 1.2em; /* Define o tamanho do ícone */
+}
+
+button:hover .fas.fa-shopping-cart {
+    color: #fff; /* Cor do ícone ao passar o mouse */
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.modal img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.modal h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.modal p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.modal span {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #075e54;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #075e54;
+    color: rgb(247, 255, 247);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; /* Alinha o conteúdo em duas linhas */
+}
+
+footer .logo {
+    width: 150px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center; /* Alinha os ícones à direita */
+    gap: 15px;
+    margin-bottom: 10px; /* Espaçamento entre os ícones e o texto de direitos autorais */
+    width: 100%; /* Garante que os ícones sejam alinhados à direita */
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #ddd;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) { 
+    .product {
+        flex-direction: column; /* Alinha os botões um em cima do outro */
+    }
+
+    .category-nav ul {
+        flex-direction: column; /* Alinha os itens da navegação verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    /* Ajustes para o header */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .user-options {
+        margin-top: 10px;
+        position: static; /* Remove o posicionamento absoluto em telas pequenas */
+    }
+}

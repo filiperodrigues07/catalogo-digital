@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <img src="imagens/VETORCRM_BRANCO.png" alt="Logo do Cliente" class="logo">
+    
+        <!-- Título -->
+        <div class="header-content">
+            <h1 class="title">Catálogo Digital</h1>
+    
+            <!-- Barra de Pesquisa -->
+            <div class="search-bar">
+                <input type="text" placeholder="O que está buscando?..." class="search-input">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    
+        <!-- Login e Carrinho -->
+        <div class="user-options">
+            <a href="#" class="login-link">Entre | Cadastre-se</a>
+            <a href="carrinho.html" class="cart-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span> <!-- Contador de produtos no carrinho -->
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra de Navegação com Categorias -->
+    <nav class="category-nav">
+        <ul>
+            <li><a href="#" class="active" data-category="geral">Página Inicial</a></li>
+            <li><a href="navegação/bebidas.html" data-category="bebidas">Bebidas</a></li>
+            <li><a href="navegação/pizzas.html" data-category="pizzas">Pizzas</a></li>
+            <li><a href="navegação/doces.html" data-category="doces">Doces</a></li>
+            <li><a href="navegação/lanches.html" data-category="lanches">Lanches</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="menu">
+            <!-- Produto 1 -->
+            <div class="product">
+                <img src="imagens/cardapio-de-hamburgueria-tradicional.png" alt="Produto 1">
+                <h2>Hambúrguer</h2>
+                <p>Delicioso hambúrguer artesanal com queijo e bacon.</p>
+                <span>R$ 20,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Hambúrguer', 20, 'imagens/cardapio-de-hamburgueria-tradicional.png')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>                
+                <button class="ver-detalhes" onclick="abrirModal('Hambúrguer', 'Delicioso hambúrguer artesanal com queijo e bacon.', 'R$ 20,00', 'imagens/cardapio-de-hamburgueria-tradicional.png')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product">
+                <img src="imagens/pizza.png" alt="Produto 2">
+                <h2>Pizza</h2>
+                <p>Pizza tradicional com molho de tomate, queijo e manjericão fresco.</p>
+                <span>R$ 35,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Pizza', 35, 'imagens/pizza.png' )">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Pizza', 'Pizza tradicional com molho de tomate, queijo e manjericão fresco.', 'R$ 35,00', 'imagens/pizza.png')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product">
+                <img src="imagens/coca.png" alt="Produto 3">
+                <h2>Coca Lata</h2>
+                <p>Coca gelada, 350ml.</p>
+                <span>R$ 5,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Coca Lata', 5, 'imagens/coca.png' )">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Coca Lata', 'Coca gelada, 350ml.', 'R$ 5,00', 'imagens/coca.png')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product">
+                <img src="imagens/salada.png" alt="Produto 4">
+                <h2>Salada Ceasar</h2>
+                <p>Salada com alface romana, parmesão, croutons e molho caesar.</p>
+                <span>R$ 25,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Salada Ceasar', 25, 'imagens/salada.png')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Salada Ceasar', 'Salada com alface romana, parmesão, croutons e molho caesar.', 'R$ 25,00', 'imagens/salada.png')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 5 -->
+            <div class="product">
+                <img src="imagens/torta.png" alt="Produto 5">
+                <h2>Bolo de Chocolate</h2>
+                <p>Delicioso bolo de chocolate com cobertura cremosa.</p>
+                <span>R$ 15,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Bolo de Chocolate', 15, 'imagens/torta.png')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Bolo de Chocolate', 'Delicioso bolo de chocolate com cobertura cremosa.', 'R$ 15,00', 'imagens/torta.png')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="product">
+                <img src="imagens/cafe.png" alt="Produto 6">
+                <h2>Café Espresso</h2>
+                <p>Café espresso feito com grãos selecionados.</p>
+                <span>R$ 8,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Café Espresso', 8, 'imagens/cafe.png')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Café Espresso', 'Café espresso feito com grãos selecionados.', 'R$ 8,00', 'imagens/cafe.png')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 7 -->
+            <div class="product">
+                <img src="imagens/suco_laranja.png" alt="Produto 7">
+                <h2>Suco de Laranja</h2>
+                <p>Suco natural de laranja fresco espremido na hora.</p>
+                <span>R$ 10,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Suco de Laranja', 10, 'imagens/suco_laranja.png')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Suco de Laranja', 'Suco natural de laranja fresco espremido na hora.', 'R$ 10,00', 'imagens/suco_laranja.png')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 8 -->
+            <div class="product">
+                <img src="imagens/batata_frita.png" alt="Produto 8">
+                <h2>Batata Frita</h2>
+                <p>Batata frita crocante e dourada.</p>
+                <span>R$ 12,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Batata Frita', 12, 'imagens/batata_frita.png')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Batata Frita', 'Batata frita crocante e dourada.', 'R$ 12,00', 'imagens/batata_frita.png')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 9 -->
+            <div class="product">
+                <img src="imagens/sanduiche_natural.png" alt="Produto 9">
+                <h2>Sanduíche Natural</h2>
+                <p>Sanduíche de frango com salada, leve e saudável.</p>
+                <span>R$ 18,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Sanduíche Natural', 18, 'imagens/sanduiche_natural.png')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Sanduíche Natural', 'Sanduíche de frango com salada, leve e saudável.', 'R$ 18,00', 'imagens/sanduiche_natural.png')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 10 -->
+            <div class="product">
+                <img src="imagens/sorvete.png" alt="Produto 10">
+                <h2>Sorvete</h2>
+                <p>Sorvete cremoso de chocolate, perfeito para sobremesas.</p>
+                <span>R$ 8,00</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Sorvete de Chocolate', 8, 'imagens/sorvete.png')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Sorvete de Chocolate', 'Sorvete cremoso de chocolate, perfeito para sobremesas.', 'R$ 8,00', 'imagens/sorvete.png')">Ver Detalhes</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para descrição detalhada do produto -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">×</span>
+            <img id="modal-image" src="" alt="Imagem do Produto">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <span id="modal-price"></span>
+        </div>
+    </div>
+    <footer>
+        <img src="imagens/VETORCRM_BRANCO.png" alt="Logo do Cliente" class="logo">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/filipe_rodrigues07" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=49991525885" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <p>© 2024 Filipe Rodrigues. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

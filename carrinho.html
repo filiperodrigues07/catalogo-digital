@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="styles/carrinho.css">
+    <script src="carrinho.js"></script>
+</head>
+<body>
+    <header>
+        <img src="imagens/VETORCRM_BRANCO.png" alt="Logo do Cliente" class="logo">
+        <h1>Carrinho de Compras</h1>
+        <a href="index.html" class="back-to-catalog">
+            <i class="fas fa-arrow-left"></i> Voltar para o Catálogo
+        </a>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Produtos no Carrinho</h2>
+            <div id="cart-items">
+                <!-- Os produtos serão listados aqui dinamicamente -->
+            </div>
+            <div class="cart-summary">
+                <h3>Total: <span id="cart-total">R$ 0,00</span></h3>
+                <button id="checkout-button">Finalizar Compra</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-items">
+        <!-- Os produtos serão listados aqui dinamicamente -->
+    </div>
+    
+    <script>
+        exibirCarrinho(); // função para exibir o carrinho ao carregar a página
+    </script>
+
+    <footer>
+        <img src="imagens/VETORCRM_BRANCO.png" alt="Logo do Cliente" class="logo">
+        <p>&copy; 2024 Filipe Rodrigues. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
