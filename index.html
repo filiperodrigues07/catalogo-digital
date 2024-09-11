@@ -19,14 +19,14 @@
     
             <!-- Barra de Pesquisa -->
             <div class="search-bar">
-                <input type="text" placeholder="O que está buscando?..." class="search-input">
-                <button class="search-button"><i class="fas fa-search"></i></button>
+                <i class="search-icon fa fa-search"></i> <!-- Ícone de lupa -->
+                <input type="text" class="search-input" placeholder="Pesquisar..." id="searchInput">
             </div>
         </div>
     
         <!-- Login e Carrinho -->
         <div class="user-options">
-            <a href="#" class="login-link">Entre | Cadastre-se</a>
+            <a href="#" class="fas fa-user" id="openLoginModal"></a>
             <a href="carrinho.html" class="cart-link">
                 <i class="fas fa-shopping-cart"></i>
                 <span id="cart-count">0</span> <!-- Contador de produtos no carrinho -->
@@ -38,10 +38,10 @@
     <nav class="category-nav">
         <ul>
             <li><a href="#" class="active" data-category="geral">Página Inicial</a></li>
-            <li><a href="navegação/bebidas.html" data-category="bebidas">Bebidas</a></li>
-            <li><a href="navegação/pizzas.html" data-category="pizzas">Pizzas</a></li>
-            <li><a href="navegação/doces.html" data-category="doces">Doces</a></li>
-            <li><a href="navegação/lanches.html" data-category="lanches">Lanches</a></li>
+            <!--<li><a href="#" data-category="bebidas">Teste 1</a></li>
+            <li><a href="#" data-category="pizzas">Teste 2</a></li>
+            <li><a href="#" data-category="doces">Teste 3</a></li>
+            <li><a href="#" data-category="lanches">Teste 4</a></li>-->
         </ul>
     </nav>
 
@@ -75,7 +75,7 @@
             <div class="product">
                 <img src="imagens/coca.png" alt="Produto 3">
                 <h2>Coca Lata</h2>
-                <p>Coca gelada, 350ml.</p>
+                <p>Coca Cola, sabor original perfeita para beber gelada, 350ml.</p>
                 <span>R$ 5,00</span>
                 <button class="add-to-cart" onclick="adicionarAoCarrinho('Coca Lata', 5, 'imagens/coca.png' )">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
@@ -135,7 +135,7 @@
             <div class="product">
                 <img src="imagens/batata_frita.png" alt="Produto 8">
                 <h2>Batata Frita</h2>
-                <p>Batata frita crocante e dourada.</p>
+                <p>Batata frita crocante, dourada e frita na hora.</p>
                 <span>R$ 12,00</span>
                 <button class="add-to-cart" onclick="adicionarAoCarrinho('Batata Frita', 12, 'imagens/batata_frita.png')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
@@ -167,6 +167,28 @@
                 <button class="ver-detalhes" onclick="abrirModal('Sorvete de Chocolate', 'Sorvete cremoso de chocolate, perfeito para sobremesas.', 'R$ 8,00', 'imagens/sorvete.png')">Ver Detalhes</button>
             </div>
         </section>
+                <!-- Modal de Login/Cadastro -->
+                <div id="loginModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="fecharLoginModal()">×</span>
+                        <h2>Login</h2>
+                        <div id="loginForm">
+                            <!-- Formulário de Login -->
+                            <input type="email" id="email" placeholder="Email" required>
+                            <input type="password" id="password" placeholder="Senha" required>
+                            <button type="submit" onclick="entrar()">Entrar</button>
+                        </div> 
+                        <div id="registerForm" style="display: none;">
+                            <!-- Formulário de Cadastro -->
+                            <input type="text" id="nome" placeholder="Nome Completo" required>
+                            <input type="email" id="email" placeholder="Email" required>
+                            <input type="password" id="senha" placeholder="Senha" required>
+                            <button type="submit" onclick="cadastrar()">Cadastrar</button>
+                        </div>
+                        <p>Ainda não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a></p>
+                        <p>Já possui uma conta? <a href="#" onclick="mostrarLogin()">Entrar</a></p>
+                    </div>
+                    </div>
     </main>
 
     <!-- Modal para descrição detalhada do produto -->
@@ -179,6 +201,7 @@
             <span id="modal-price"></span>
         </div>
     </div>
+
     <footer>
         <img src="imagens/VETORCRM_BRANCO.png" alt="Logo do Cliente" class="logo">
         <div class="social-icons">
