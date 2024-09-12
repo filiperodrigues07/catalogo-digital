@@ -11,8 +11,10 @@
 <body>
     <header>
         <!-- Logo -->
-        <img src="imagens/VETORCRM_BRANCO.png" alt="Logo do Cliente" class="logo">
-    
+    <div class="logo-container">
+        <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo Vetor" class="logo">
+        <img src="imagens-catalogo/logo_CH.png" alt="Logo CH" class="logo">
+    </div> 
         <!-- Título -->
         <div class="header-content">
             <h1 class="title">Catálogo Digital</h1>
@@ -26,7 +28,6 @@
     
         <!-- Login e Carrinho -->
         <div class="user-options">
-            <a href="#" class="fas fa-user" id="openLoginModal"></a>
             <a href="carrinho.html" class="cart-link">
                 <i class="fas fa-shopping-cart"></i>
                 <span id="cart-count">0</span> <!-- Contador de produtos no carrinho -->
@@ -49,146 +50,124 @@
         <section class="menu">
             <!-- Produto 1 -->
             <div class="product">
-                <img src="imagens/cardapio-de-hamburgueria-tradicional.png" alt="Produto 1">
-                <h2>Hambúrguer</h2>
-                <p>Delicioso hambúrguer artesanal com queijo e bacon.</p>
-                <span>R$ 20,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Hambúrguer', 20, 'imagens/cardapio-de-hamburgueria-tradicional.png')">
+                <img src="imagens-catalogo/bio-mais-liso-shampoo.jpg" alt="Produto 1">
+                <h2>BIOEXTRATUS SHAMPOO BIO MAIS LISO 350ml</h2>
+                <p>Limpeza Eficaz. Sem adição de sal, promove uma limpeza eficaz sem ressecar os cabelos.</p>
+                <span>R$ 52,90</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('SHAMPOO BIO MAIS LISO 350ml', 52.90 , 'imagens-catalogo/bio-mais-liso-shampoo.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>                
-                <button class="ver-detalhes" onclick="abrirModal('Hambúrguer', 'Delicioso hambúrguer artesanal com queijo e bacon.', 'R$ 20,00', 'imagens/cardapio-de-hamburgueria-tradicional.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('SHAMPOO BIO MAIS LISO 350ml', 'Limpeza Eficaz. Sem adição de sal, promove uma limpeza eficaz sem ressecar os cabelos. Perfeito para uso diário. Alinha os fios, deixando-os mais lisos, leves e com muito brilho.' , 'R$ 52,90' , 'imagens-catalogo/bio-mais-liso-shampoo.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 2 -->
             <div class="product">
-                <img src="imagens/pizza.png" alt="Produto 2">
-                <h2>Pizza</h2>
-                <p>Pizza tradicional com molho de tomate, queijo e manjericão fresco.</p>
-                <span>R$ 35,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Pizza', 35, 'imagens/pizza.png' )">
+                <img src="imagens-catalogo/bio-pimenta.jpg" alt="Produto 2">
+                <h2>BIOEXTRATUS LOÇAO FORÇA COM PIMENTA 100ml</h2>
+                <p>Dá Brilho e Vitalidade ao cabelo.</p>
+                <span>R$ 44,03</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('BIOEXTRATUS LOÇAO FORÇA COM PIMENTA 100ml', 44.03, 'imagens-catalogo/bio-pimenta.jpg' )">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Pizza', 'Pizza tradicional com molho de tomate, queijo e manjericão fresco.', 'R$ 35,00', 'imagens/pizza.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('BIOEXTRATUS LOÇAO FORÇA COM PIMENTA 100ml', 'Dá Brilho e Vitalidade ao cabelo.Tem, em sua fórmula concentrada, micronutrientes essenciais e o poder de reconstrução da microqueratina. Age da raiz às pontas, devolvendo o brilho e a vitalidade aos cabelos.', 'R$ 44,03', 'imagens-catalogo/bio-pimenta.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 3 -->
             <div class="product">
-                <img src="imagens/coca.png" alt="Produto 3">
-                <h2>Coca Lata</h2>
-                <p>Coca Cola, sabor original perfeita para beber gelada, 350ml.</p>
-                <span>R$ 5,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Coca Lata', 5, 'imagens/coca.png' )">
+                <img src="imagens-catalogo/condicionador-meus-cachos.jpg" alt="Produto 3">
+                <h2>NOVEX CONDICIONADOR MEUS CACHOS 300ml</h2>
+                <p>O Condicionador Novex Meus Cachos está indicado para os cabelos encaracolados e hidrata, ajudando a definir os caracóis por mais tempo.</p>
+                <span>R$ 18,90</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('NOVEX CONDICIONADOR MEUS CACHOS 300ml', 18.90, 'imagens-catalogo/condicionador-meus-cachos.jpg' )">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Coca Lata', 'Coca gelada, 350ml.', 'R$ 5,00', 'imagens/coca.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('NOVEX CONDICIONADOR MEUS CACHOS 300ml', 'O Condicionador Novex Meus Cachos está indicado para os cabelos encaracolados e hidrata, ajudando a definir os caracóis por mais tempo.', 'R$ 18,90', 'imagens-catalogo/condicionador-meus-cachos.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 4 -->
             <div class="product">
-                <img src="imagens/salada.png" alt="Produto 4">
-                <h2>Salada Ceasar</h2>
-                <p>Salada com alface romana, parmesão, croutons e molho caesar.</p>
-                <span>R$ 25,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Salada Ceasar', 25, 'imagens/salada.png')">
+                <img src="imagens-catalogo/condicionador-morte-subita.jpg" alt="Produto 4">
+                <h2>LOLA MORTE SÚBITA SHAMPOO 250ml</h2>
+                <p>Condicionador para cabelos danificados e quimicamente tratados. Excelente para uso após coloração ou outra química.</p>
+                <span>R$ 27,90</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('LOLA MORTE SÚBITA SHAMPOO 250ml', 27.90, 'imagens-catalogo/condicionador-morte-subita.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Salada Ceasar', 'Salada com alface romana, parmesão, croutons e molho caesar.', 'R$ 25,00', 'imagens/salada.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('LOLA MORTE SÚBITA SHAMPOO 250ml', 'Condicionador para cabelos danificados e quimicamente tratados. Excelente para uso após coloração ou outra química.', 'R$ 27,90', 'imagens-catalogo/condicionador-morte-subita.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 5 -->
             <div class="product">
-                <img src="imagens/torta.png" alt="Produto 5">
-                <h2>Bolo de Chocolate</h2>
-                <p>Delicioso bolo de chocolate com cobertura cremosa.</p>
-                <span>R$ 15,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Bolo de Chocolate', 15, 'imagens/torta.png')">
+                <img src="imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg" alt="Produto 5">
+                <h2>NOVEX SHAMPOO AFRO HAIR 300ml</h2>
+                <p>Enriquecido com Argan e D-Pantenol, o Kit Champô e Condicionador Estilo Afrohair proporciona hidratação e brilho prolongado. Os caracóis ficam macios, hidratados e sem pontas espigadas.</p>
+                <span>R$ 36,99</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('NOVEX SHAMPOO AFRO HAIR 300ml', 36.99, 'imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Bolo de Chocolate', 'Delicioso bolo de chocolate com cobertura cremosa.', 'R$ 15,00', 'imagens/torta.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('NOVEX SHAMPOO AFRO HAIR 300ml', 'Enriquecido com Argan e D-Pantenol, o Kit Champô e Condicionador Estilo Afrohair proporciona hidratação e brilho prolongado. Os caracóis ficam macios, hidratados e sem pontas espigadas.', 'R$ 36,99', 'imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 6 -->
             <div class="product">
-                <img src="imagens/cafe.png" alt="Produto 6">
-                <h2>Café Espresso</h2>
-                <p>Café espresso feito com grãos selecionados.</p>
-                <span>R$ 8,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Café Espresso', 8, 'imagens/cafe.png')">
+                <img src="imagens-catalogo/prancha-ultra-slim-pro.jpg" alt="Produto 6">
+                <h2>PRANCHA ULTRA SLIM PRO</h2>
+                <p>Prancha profissional UltraSlimPro de design ultra fino. Cabo rotativo 360º, placas titanium, deslizamento super suave, ajuste digital da temperatura, estabilizador da temperatura.</p>
+                <span>R$ 329,82</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('PRANCHA ULTRA SLIM PRO', 392.82, 'imagens-catalogo/prancha-ultra-slim-pro.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Café Espresso', 'Café espresso feito com grãos selecionados.', 'R$ 8,00', 'imagens/cafe.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('PRANCHA ULTRA SLIM PRO', 'Prancha profissional UltraSlimPro de design ultra fino. Cabo rotativo 360º, placas titanium, deslizamento super suave, ajuste digital da temperatura, estabilizador da temperatura. Ideal para tratamentos de queratina e alisamentos com escova progressiva. A resistência autocontrola-se. Tem como função manter a temperatura constante através da reposição do calor', 'R$ 329,82', 'imagens-catalogo/prancha-ultra-slim-pro.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 7 -->
             <div class="product">
-                <img src="imagens/suco_laranja.png" alt="Produto 7">
-                <h2>Suco de Laranja</h2>
-                <p>Suco natural de laranja fresco espremido na hora.</p>
-                <span>R$ 10,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Suco de Laranja', 10, 'imagens/suco_laranja.png')">
+                <img src="imagens-catalogo/pre-matizador-gota-dourada.jpg" alt="Produto 7">
+                <h2>GOTA DOURADA PRÉ MATIZADOR 300ml</h2>
+                <p>Prepara, limpa e restaura o cabelo deixando pronto para receber a aplicação do matizador seja de qualquer cor que tenha escolhido.</p>
+                <span>R$ 41,32</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('GOTA DOURADA PRÉ MATIZADOR 300ml', 41.32, 'imagens-catalogo/pre-matizador-gota-dourada.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Suco de Laranja', 'Suco natural de laranja fresco espremido na hora.', 'R$ 10,00', 'imagens/suco_laranja.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('GOTA DOURADA PRÉ MATIZADOR 300ml', 'Prepara, limpa e restaura o cabelo deixando pronto para receber a aplicação do matizador seja de qualquer cor que tenha escolhido.', 'R$ 41,32', 'imagens-catalogo/pre-matizador-gota-dourada.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 8 -->
             <div class="product">
-                <img src="imagens/batata_frita.png" alt="Produto 8">
-                <h2>Batata Frita</h2>
-                <p>Batata frita crocante, dourada e frita na hora.</p>
-                <span>R$ 12,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Batata Frita', 12, 'imagens/batata_frita.png')">
+                <img src="imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg" alt="Produto 8">
+                <h2>REAL NATURA DRENO QUEIMA CELULITE ACTIVO 500ml</h2>
+                <p>Celulite Ativo é um gel reafirmante e anticelulitico de efeito frio, que ajuda a promover a boa circulação, atenuando significativamente o efeito casca de laranja, promovendo uma pele firme e hidratada.</p>
+                <span>R$ 105,73</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('REAL NATURA DRENO QUEIMA CELULITE ACTIVO 500ml', 105.73, 'imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Batata Frita', 'Batata frita crocante e dourada.', 'R$ 12,00', 'imagens/batata_frita.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('REAL NATURA DRENO QUEIMA CELULITE ACTIVO 500ml', 'Celulite Ativo é um gel reafirmante e anticelulitico de efeito frio, que ajuda a promover a boa circulação, atenuando significativamente o efeito casca de laranja, promovendo uma pele firme e hidratada.', 'R$ 105,73', 'imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 9 -->
             <div class="product">
-                <img src="imagens/sanduiche_natural.png" alt="Produto 9">
-                <h2>Sanduíche Natural</h2>
-                <p>Sanduíche de frango com salada, leve e saudável.</p>
-                <span>R$ 18,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Sanduíche Natural', 18, 'imagens/sanduiche_natural.png')">
+                <img src="imagens-catalogo/shampoo-cachos-de-cinema.jpg" alt="Produto 9">
+                <h2>NOVEX SHAMPOO CACHOS DE CINEMA 300ml</h2>
+                <p>O Shampoo Novex Meus Cachos de Cinema é enriquecido com puros Óleos de Argan, Coco, Linhaça, Girassol, Abacate e Oliva, proporciona caracóis suaves, brilhantes e cheios de vida.</p>
+                <span>R$ 12,90</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('NOVEX SHAMPOO CACHOS DE CINEMA 300ml', 12.90, 'imagens-catalogo/shampoo-cachos-de-cinema.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Sanduíche Natural', 'Sanduíche de frango com salada, leve e saudável.', 'R$ 18,00', 'imagens/sanduiche_natural.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('NOVEX SHAMPOO CACHOS DE CINEMA 300ml', 'O Shampoo Novex Meus Cachos de Cinema é enriquecido com puros Óleos de Argan, Coco, Linhaça, Girassol, Abacate e Oliva, proporciona caracóis suaves, brilhantes e cheios de vida.', 'R$ 12,90', 'imagens-catalogo/shampoo-cachos-de-cinema.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 10 -->
             <div class="product">
-                <img src="imagens/sorvete.png" alt="Produto 10">
-                <h2>Sorvete</h2>
-                <p>Sorvete cremoso de chocolate, perfeito para sobremesas.</p>
-                <span>R$ 8,00</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('Sorvete de Chocolate', 8, 'imagens/sorvete.png')">
+                <img src="imagens-catalogo/secador-parlux-superturbo-hp-2400w.jpg" alt="Produto 10">
+                <h2>SECADOR PARLUX SUPERTURBO HP 2400W</h2>
+                <p>O secador potente e compacto do mercado.</p>
+                <span>R$ 740,55</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('SECADOR PARLUX SUPERTURBO HP 2400W', 740.55, 'imagens-catalogo/secador-parlux-superturbo-hp-2400w.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Sorvete de Chocolate', 'Sorvete cremoso de chocolate, perfeito para sobremesas.', 'R$ 8,00', 'imagens/sorvete.png')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('SECADOR PARLUX SUPERTURBO HP 2400W', 'O secador potente e compacto do mercado. Garantia de 6 meses por ser um produto de uso profissional.', 'R$ 740,55', 'imagens-catalogo/secador-parlux-superturbo-hp-2400w.jpg')">Ver Detalhes</button>
             </div>
         </section>
-                <!-- Modal de Login/Cadastro -->
-                <div id="loginModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="fecharLoginModal()">×</span>
-                        <h2>Login</h2>
-                        <div id="loginForm">
-                            <!-- Formulário de Login -->
-                            <input type="email" id="email" placeholder="Email" required>
-                            <input type="password" id="password" placeholder="Senha" required>
-                            <button type="submit" onclick="entrar()">Entrar</button>
-                        </div> 
-                        <div id="registerForm" style="display: none;">
-                            <!-- Formulário de Cadastro -->
-                            <input type="text" id="nome" placeholder="Nome Completo" required>
-                            <input type="email" id="email" placeholder="Email" required>
-                            <input type="password" id="senha" placeholder="Senha" required>
-                            <button type="submit" onclick="cadastrar()">Cadastrar</button>
-                        </div>
-                        <p>Ainda não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a></p>
-                        <p>Já possui uma conta? <a href="#" onclick="mostrarLogin()">Entrar</a></p>
-                    </div>
-                    </div>
     </main>
 
     <!-- Modal para descrição detalhada do produto -->
@@ -203,7 +182,7 @@
     </div>
 
     <footer>
-        <img src="imagens/VETORCRM_BRANCO.png" alt="Logo do Cliente" class="logo">
+        <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo Vetor" class="logo">
         <div class="social-icons">
             <a href="https://www.instagram.com/filipe_rodrigues07" target="_blank">
                 <i class="fab fa-instagram"></i>
@@ -212,7 +191,7 @@
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
-        <p>© 2024 Filipe Rodrigues. Todos os direitos reservados.</p>
+        <p>© Copyright vetorCRM. Direitos reservados.</p>
     </footer>
 </body>
 </html>

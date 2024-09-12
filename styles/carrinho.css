@@ -18,7 +18,7 @@ header {
 }
 
 header .logo {
-    width: 150px;
+    width: 120px;
 }
 
 header h1 {
@@ -145,6 +145,7 @@ header h1 {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    border-radius: 25px;
 }
 
 #checkout-button:hover {
@@ -170,7 +171,7 @@ footer .logo {
 
 footer p {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Mobile responsiveness */

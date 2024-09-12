@@ -21,7 +21,7 @@ header {
 
 /* Logo no canto esquerdo */
 header .logo {
-    width: 150px; /* Mantém o tamanho original do logo */
+    width: 100px; /* Mantém o tamanho original do logo */
     margin-left: 15px;
     margin-top: 10px; /* Adiciona uma margem superior para espaçamento */
 }
@@ -336,121 +336,133 @@ footer p {
 
 /* Estilos gerais para celulares */
 @media only screen and (max-width: 768px) {
-    /* Estilo geral */
-/* Estilo geral */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    text-align: center; /* Centraliza o texto no corpo */
-}
-
-/* Estilo do cabeçalho */
-header {
-    background-color: #075e54;
-    color: rgb(247, 255, 247);
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column; /* Alinhamento vertical do conteúdo */
-    position: relative;
-}
-
-/* Logo fixado no canto superior esquerdo */
-header .logo {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    width: 100px; /* Mantém o tamanho original do logo */
-}
-
-/* User Options (Login e Carrinho) */
-.user-options {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Espaçamento entre login e carrinho */
-}
-
-.user-options a {
-    font-size: 24px; /* Tamanho dos ícones */
-    color: #fff; /* Cor dos ícones */
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;  /* Largura uniforme para os ícones */
-    height: 40px; /* Altura uniforme para os ícones */
-    background-color: #333; /* Fundo dos ícones */
-    border-radius: 50%; /* Forma circular */
-}
-
-.user-options a:hover {
-    background-color: #555; /* Cor de fundo ao passar o mouse */
-}
-
-.cart-link {
-    position: relative;
-}
-
-#cart-count {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 50%;
-}
-
-/* Centralizando o título e a barra de pesquisa abaixo do login e carrinho */
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px; /* Espaçamento para ficar abaixo do login e carrinho */
-}
-
-/* Título centralizado no header */
-.title {
-    margin: 0;
-    font-size: 18px;
-    padding-bottom: 10px;
-}
-
-/* Barra de pesquisa com ícone de lupa */
-.search-bar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-    margin: 10px 0;
-    position: relative; /* Para posicionar o ícone de lupa dentro do input */
-}
-
-.search-input {
-    width: 100%;
-    padding: 10px 20px 10px 40px; /* Aumenta o padding à esquerda para deixar espaço para a lupa */
-    border: 1px solid #ccc;
-    border-radius: 25px; /* Borda arredondada */
-    font-size: 12px;
-}
-
-.search-input:focus {
-    outline: none; /* Remove a borda azul ao focar */
-    border-color: #4CAF50; /* Cor verde ao focar */
-}
-
-/* Ícone de lupa dentro do input */
-.search-bar .search-icon {
-    position: absolute;
-    left: 15px; /* Distância do ícone em relação ao início do input */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #ccc; /* Cor do ícone de lupa */
-    pointer-events: none; /* Não permite interação no ícone */
-}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        text-align: center; 
+    }
+    
+    /* Estilo do cabeçalho */
+    header {
+        background-color: #075e54;
+        color: rgb(247, 255, 247);
+        padding: 20px;
+        display: flex;
+        flex-direction: column; /* Organiza o conteúdo do header em colunas */
+        align-items: center; /* Centraliza horizontalmente o conteúdo do header */
+        position: relative;
+    }
+    
+    /* Contêiner para as logos */
+    header .logo-container {
+        display: flex;
+        align-items: center; /* Centraliza verticalmente as logos */
+        justify-content: center; /* Centraliza as logos horizontalmente */
+        margin-bottom: 20px; /* Espaço abaixo das logos */
+    }
+    
+    header .logo {
+        margin-right: 10px; /* Espaçamento entre as logos */
+        width: 70px; /* Define o tamanho da logo */
+    }
+    
+    /* Ajuste para manter as duas logos lado a lado */
+    header .logo:last-child {
+        margin-right: 0; /* Remove margem à direita da última logo */
+    }
+    
+    .user-options {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .user-options a {
+        font-size: 24px; /* Tamanho dos ícones */
+        color: #fff; /* Cor dos ícones */
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;  /* Largura uniforme para os ícones */
+        height: 40px; /* Altura uniforme para os ícones */
+        background-color: #333; /* Fundo dos ícones */
+        border-radius: 50%; /* Forma circular */
+    }
+    
+    .user-options a:hover {
+        background-color: #555; /* Cor de fundo ao passar o mouse */
+    }
+    
+    .cart-link {
+        position: relative;
+    }
+    
+    #cart-count {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 50%;
+    }
+    
+    /* Estilo centralizado para o título e a barra de pesquisa */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* Título centralizado no header */
+    .title {
+        margin: 0;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    
+    /* Barra de pesquisa com ícone de lupa */
+    .search-bar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        margin: 10px 0;
+        position: relative; /* Para posicionar o ícone de lupa dentro do input */
+    }
+    
+    .search-input {
+        width: 100%;
+        padding: 10px 20px 10px 40px; /* Aumenta o padding à esquerda para deixar espaço para a lupa */
+        border: 1px solid #ccc;
+        border-radius: 25px; /* Borda arredondada */
+        font-size: 12px;
+    }
+    
+    .search-input:focus {
+        outline: none; /* Remove a borda azul ao focar */
+        border-color: #4CAF50; /* Cor verde ao focar */
+    }
+    
+    /* Ícone de lupa dentro do input */
+    .search-bar .search-icon {
+        position: absolute;
+        left: 15px; /* Distância do ícone em relação ao início do input */
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #ccc; /* Cor do ícone de lupa */
+        pointer-events: none; /* Não permite interação no ícone */
+    }
 
 /* Opções de usuário (login e carrinho) no canto superior direito */
 .user-options {
@@ -554,7 +566,7 @@ header .logo {
 }
 
 .product h2 {
-    font-size: 1.1em;
+    font-size: 1.0em;
 }
 
 .product p {
