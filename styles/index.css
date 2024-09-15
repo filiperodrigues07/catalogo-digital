@@ -2,7 +2,7 @@
 @media only screen and (min-width: 1024px) {
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Saira, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -21,7 +21,7 @@ header {
 
 /* Logo no canto esquerdo */
 header .logo {
-    width: 100px; /* Mantém o tamanho original do logo */
+    width: 120px; /* Mantém o tamanho original do logo */
     margin-left: 15px;
     margin-top: 10px; /* Adiciona uma margem superior para espaçamento */
 }
@@ -293,42 +293,39 @@ button:hover .fas.fa-shopping-cart {
 
 /* Estilo do rodapé */
 footer {
-    background-color: #075e54;
-    color: rgb(247, 255, 247);
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column; /* Alinha o conteúdo em duas linhas */
+    background-color: #075E54;
+    padding: 30px 20px; /* Aumentei o padding para um espaço mais confortável */
+    text-align: center;
+    color: #f3f3f3;
 }
 
 footer .logo {
     width: 150px;
+    margin-bottom: 20px; /* Aumentei o espaçamento inferior */
 }
 
-footer .social-icons {
+footer .contact-info {
+    margin-bottom: 20px; /* Espaço entre os contatos e o resto do conteúdo */
+}
+
+footer .contact-info p {
+    margin: 5px 0; /* Reduzi o espaçamento entre os itens de contato */
+    font-size: 16px;
+    color: #f8f6f6;
     display: flex;
-    justify-content: center; /* Alinha os ícones à direita */
-    gap: 15px;
-    margin-bottom: 10px; /* Espaçamento entre os ícones e o texto de direitos autorais */
-    width: 100%; /* Garante que os ícones sejam alinhados à direita */
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* Para alinhar o texto à esquerda */
+    gap: 10px; /* Criei um gap entre o ícone e o texto */
 }
 
-footer .social-icons a {
-    color: white;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer .social-icons a:hover {
-    color: #ddd;
+footer .contact-info i {
+    font-size: 18px;
 }
 
 footer p {
-    margin: 0;
-    text-align: center;
-    font-size: 12px;
+    margin: 15px 0 0;
+    font-size: 14px;
 }
 
     }
@@ -337,7 +334,7 @@ footer p {
 /* Estilos gerais para celulares */
 @media only screen and (max-width: 768px) {
     body {
-        font-family: Arial, sans-serif;
+        font-family: Saira, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
@@ -674,7 +671,7 @@ button:hover .fas.fa-shopping-cart {
 footer {
     background-color: #075e54;
     color: rgb(247, 255, 247);
-    padding: 15px;
+    padding: 20px; /* Aumentei o padding para mais espaço */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -683,14 +680,15 @@ footer {
 
 footer .logo {
     width: 150px;
+    margin-bottom: 15px; /* Espaçamento adicional entre o logo e o resto do conteúdo */
 }
 
 footer .social-icons {
     display: flex;
-    justify-content: center; /* Alinha os ícones à direita */
+    justify-content: center;
     gap: 15px;
-    margin-bottom: 10px; /* Espaçamento entre os ícones e o texto de direitos autorais */
-    width: 100%; /* Garante que os ícones sejam alinhados à direita */
+    margin-bottom: 15px; /* Ajustei o espaço entre os ícones e o conteúdo */
+    width: 100%; 
 }
 
 footer .social-icons a {
@@ -702,6 +700,27 @@ footer .social-icons a {
 
 footer .social-icons a:hover {
     color: #ddd;
+}
+
+footer .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaço entre os itens de contato */
+    margin-bottom: 15px; /* Espaçamento entre os contatos e o texto de direitos reservados */
+}
+
+footer .contact-info p {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    color: rgb(247, 255, 247);
+}
+
+footer .contact-info i {
+    font-size: 18px;
 }
 
 footer p {

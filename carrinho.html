@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles/carrinho.css">
-    <script src="carrinho.js"></script>
+    <script src="scripts/carrinho.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
 </head>
 <body>
     <header>
-        <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo do Cliente" class="logo">
+        <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo Vetor" class="logo">
+        <img src="imagens-catalogo/logo_CH.png" alt="Logo CH" class="logo">
         <h1>Carrinho de Compras</h1>
-        <a href="index.html" class="back-to-catalog">
-            <i class="fas fa-arrow-left"></i>
-        </a>
     </header>
 
-    <main>
+    <main class="content">
         <section class="cart">
             <h2>Produtos no Carrinho</h2>
             <div id="cart-items">
@@ -39,6 +41,23 @@
 
     <footer>
         <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo do Cliente" class="logo">
+        <div class="contact-info">
+            <p>
+                <i class="fas fa-map-marker-alt"></i> Av. Barão do Rio Branco, 104 - Sala 603 - Centro, Joaçaba - SC, 89600-000
+            </p>
+            <p>
+                <i class="fas fa-id-card"></i> 47.615.849/0001-33
+            </p>
+            <p>
+                <i class="fas fa-phone-alt"></i> (49) 3522 9014
+            </p>
+            <p>
+                <i class="fab fa-whatsapp"></i> (49) 99110-6297
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i> contato@vetorcrm.com.br
+            </p>
+        </div>
         <p>&copy; Copyright vetorCRM. Direitos reservados.</p>
     </footer>
 </body>

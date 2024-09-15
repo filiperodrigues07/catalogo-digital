@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Digital</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
 </head>
 <body>
     <header>
@@ -26,7 +28,7 @@
             </div>
         </div>
     
-        <!-- Login e Carrinho -->
+        <!--Carrinho -->
         <div class="user-options">
             <a href="carrinho.html" class="cart-link">
                 <i class="fas fa-shopping-cart"></i>
@@ -51,121 +53,121 @@
             <!-- Produto 1 -->
             <div class="product">
                 <img src="imagens-catalogo/bio-mais-liso-shampoo.jpg" alt="Produto 1">
-                <h2>BIOEXTRATUS SHAMPOO BIO MAIS LISO 350ml</h2>
+                <h2>Bioextratus Shampoo Bio Mais Liso 350ml</h2>
                 <p>Limpeza Eficaz. Sem adição de sal, promove uma limpeza eficaz sem ressecar os cabelos.</p>
                 <span>R$ 52,90</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('SHAMPOO BIO MAIS LISO 350ml', 52.90 , 'imagens-catalogo/bio-mais-liso-shampoo.jpg')">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Bioextratus Shampoo Bio Mais Liso 350ml', 52.90 , 'imagens-catalogo/bio-mais-liso-shampoo.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>                
-                <button class="ver-detalhes" onclick="abrirModal('SHAMPOO BIO MAIS LISO 350ml', 'Limpeza Eficaz. Sem adição de sal, promove uma limpeza eficaz sem ressecar os cabelos. Perfeito para uso diário. Alinha os fios, deixando-os mais lisos, leves e com muito brilho.' , 'R$ 52,90' , 'imagens-catalogo/bio-mais-liso-shampoo.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Bioextratus Shampoo Bio Mais Liso 350ml', 'Limpeza Eficaz. Sem adição de sal, promove uma limpeza eficaz sem ressecar os cabelos. Perfeito para uso diário. Alinha os fios, deixando-os mais lisos, leves e com muito brilho.' , 'R$ 52,90' , 'imagens-catalogo/bio-mais-liso-shampoo.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 2 -->
             <div class="product">
                 <img src="imagens-catalogo/bio-pimenta.jpg" alt="Produto 2">
-                <h2>BIOEXTRATUS LOÇAO FORÇA COM PIMENTA 100ml</h2>
+                <h2>Bioextratus Loção Força com Pimenta 100ml</h2>
                 <p>Dá Brilho e Vitalidade ao cabelo.</p>
                 <span>R$ 44,03</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('BIOEXTRATUS LOÇAO FORÇA COM PIMENTA 100ml', 44.03, 'imagens-catalogo/bio-pimenta.jpg' )">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Bioextratus Loção Força com Pimenta 100ml', 44.03, 'imagens-catalogo/bio-pimenta.jpg' )">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('BIOEXTRATUS LOÇAO FORÇA COM PIMENTA 100ml', 'Dá Brilho e Vitalidade ao cabelo.Tem, em sua fórmula concentrada, micronutrientes essenciais e o poder de reconstrução da microqueratina. Age da raiz às pontas, devolvendo o brilho e a vitalidade aos cabelos.', 'R$ 44,03', 'imagens-catalogo/bio-pimenta.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Bioextratus Loção Força com Pimenta 100ml', 'Dá Brilho e Vitalidade ao cabelo.Tem, em sua fórmula concentrada, micronutrientes essenciais e o poder de reconstrução da microqueratina. Age da raiz às pontas, devolvendo o brilho e a vitalidade aos cabelos.', 'R$ 44,03', 'imagens-catalogo/bio-pimenta.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 3 -->
             <div class="product">
                 <img src="imagens-catalogo/condicionador-meus-cachos.jpg" alt="Produto 3">
-                <h2>NOVEX CONDICIONADOR MEUS CACHOS 300ml</h2>
+                <h2>Novex Condicionador Meus Cachos 300ml</h2>
                 <p>O Condicionador Novex Meus Cachos está indicado para os cabelos encaracolados e hidrata, ajudando a definir os caracóis por mais tempo.</p>
                 <span>R$ 18,90</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('NOVEX CONDICIONADOR MEUS CACHOS 300ml', 18.90, 'imagens-catalogo/condicionador-meus-cachos.jpg' )">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Novex Condicionador Meus Cachos 300ml', 18.90, 'imagens-catalogo/condicionador-meus-cachos.jpg' )">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('NOVEX CONDICIONADOR MEUS CACHOS 300ml', 'O Condicionador Novex Meus Cachos está indicado para os cabelos encaracolados e hidrata, ajudando a definir os caracóis por mais tempo.', 'R$ 18,90', 'imagens-catalogo/condicionador-meus-cachos.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Novex Condicionador Meus Cachos 300ml', 'O Condicionador Novex Meus Cachos está indicado para os cabelos encaracolados e hidrata, ajudando a definir os caracóis por mais tempo.', 'R$ 18,90', 'imagens-catalogo/condicionador-meus-cachos.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 4 -->
             <div class="product">
                 <img src="imagens-catalogo/condicionador-morte-subita.jpg" alt="Produto 4">
-                <h2>LOLA MORTE SÚBITA SHAMPOO 250ml</h2>
+                <h2>Lola Morte Súbita Shampoo 250ml</h2>
                 <p>Condicionador para cabelos danificados e quimicamente tratados. Excelente para uso após coloração ou outra química.</p>
                 <span>R$ 27,90</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('LOLA MORTE SÚBITA SHAMPOO 250ml', 27.90, 'imagens-catalogo/condicionador-morte-subita.jpg')">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Lola Morte Súbita Shampoo 250ml', 27.90, 'imagens-catalogo/condicionador-morte-subita.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('LOLA MORTE SÚBITA SHAMPOO 250ml', 'Condicionador para cabelos danificados e quimicamente tratados. Excelente para uso após coloração ou outra química.', 'R$ 27,90', 'imagens-catalogo/condicionador-morte-subita.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Lola Morte Súbita Shampoo 250ml', 'Condicionador para cabelos danificados e quimicamente tratados. Excelente para uso após coloração ou outra química.', 'R$ 27,90', 'imagens-catalogo/condicionador-morte-subita.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 5 -->
             <div class="product">
                 <img src="imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg" alt="Produto 5">
-                <h2>NOVEX SHAMPOO AFRO HAIR 300ml</h2>
+                <h2>Novex Shampoo Afro Hair 300ml</h2>
                 <p>Enriquecido com Argan e D-Pantenol, o Kit Champô e Condicionador Estilo Afrohair proporciona hidratação e brilho prolongado. Os caracóis ficam macios, hidratados e sem pontas espigadas.</p>
                 <span>R$ 36,99</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('NOVEX SHAMPOO AFRO HAIR 300ml', 36.99, 'imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg')">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Novex Shampoo Afro Hair 300ml', 36.99, 'imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('NOVEX SHAMPOO AFRO HAIR 300ml', 'Enriquecido com Argan e D-Pantenol, o Kit Champô e Condicionador Estilo Afrohair proporciona hidratação e brilho prolongado. Os caracóis ficam macios, hidratados e sem pontas espigadas.', 'R$ 36,99', 'imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Novex Shampoo Afro Hair 300ml', 'Enriquecido com Argan e D-Pantenol, o Kit Champô e Condicionador Estilo Afrohair proporciona hidratação e brilho prolongado. Os caracóis ficam macios, hidratados e sem pontas espigadas.', 'R$ 36,99', 'imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 6 -->
             <div class="product">
                 <img src="imagens-catalogo/prancha-ultra-slim-pro.jpg" alt="Produto 6">
-                <h2>PRANCHA ULTRA SLIM PRO</h2>
+                <h2>Prancha Ultra Slim Pro</h2>
                 <p>Prancha profissional UltraSlimPro de design ultra fino. Cabo rotativo 360º, placas titanium, deslizamento super suave, ajuste digital da temperatura, estabilizador da temperatura.</p>
                 <span>R$ 329,82</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('PRANCHA ULTRA SLIM PRO', 392.82, 'imagens-catalogo/prancha-ultra-slim-pro.jpg')">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Prancha Ultra Slim Pro', 392.82, 'imagens-catalogo/prancha-ultra-slim-pro.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('PRANCHA ULTRA SLIM PRO', 'Prancha profissional UltraSlimPro de design ultra fino. Cabo rotativo 360º, placas titanium, deslizamento super suave, ajuste digital da temperatura, estabilizador da temperatura. Ideal para tratamentos de queratina e alisamentos com escova progressiva. A resistência autocontrola-se. Tem como função manter a temperatura constante através da reposição do calor', 'R$ 329,82', 'imagens-catalogo/prancha-ultra-slim-pro.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Prancha Ultra Slim Pro', 'Prancha profissional UltraSlimPro de design ultra fino. Cabo rotativo 360º, placas titanium, deslizamento super suave, ajuste digital da temperatura, estabilizador da temperatura. Ideal para tratamentos de queratina e alisamentos com escova progressiva. A resistência autocontrola-se. Tem como função manter a temperatura constante através da reposição do calor', 'R$ 329,82', 'imagens-catalogo/prancha-ultra-slim-pro.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 7 -->
             <div class="product">
                 <img src="imagens-catalogo/pre-matizador-gota-dourada.jpg" alt="Produto 7">
-                <h2>GOTA DOURADA PRÉ MATIZADOR 300ml</h2>
+                <h2>Gota Dourada Pré Matizador 300ml</h2>
                 <p>Prepara, limpa e restaura o cabelo deixando pronto para receber a aplicação do matizador seja de qualquer cor que tenha escolhido.</p>
                 <span>R$ 41,32</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('GOTA DOURADA PRÉ MATIZADOR 300ml', 41.32, 'imagens-catalogo/pre-matizador-gota-dourada.jpg')">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Gota Dourada Pré Matizador 300ml', 41.32, 'imagens-catalogo/pre-matizador-gota-dourada.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('GOTA DOURADA PRÉ MATIZADOR 300ml', 'Prepara, limpa e restaura o cabelo deixando pronto para receber a aplicação do matizador seja de qualquer cor que tenha escolhido.', 'R$ 41,32', 'imagens-catalogo/pre-matizador-gota-dourada.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Gota Dourada Pré Matizador 300ml', 'Prepara, limpa e restaura o cabelo deixando pronto para receber a aplicação do matizador seja de qualquer cor que tenha escolhido.', 'R$ 41,32', 'imagens-catalogo/pre-matizador-gota-dourada.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 8 -->
             <div class="product">
                 <img src="imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg" alt="Produto 8">
-                <h2>REAL NATURA DRENO QUEIMA CELULITE ACTIVO 500ml</h2>
+                <h2>Real Natura Dreno Queima Celulite ativo 500ml</h2>
                 <p>Celulite Ativo é um gel reafirmante e anticelulitico de efeito frio, que ajuda a promover a boa circulação, atenuando significativamente o efeito casca de laranja, promovendo uma pele firme e hidratada.</p>
                 <span>R$ 105,73</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('REAL NATURA DRENO QUEIMA CELULITE ACTIVO 500ml', 105.73, 'imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg')">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Real Natura Dreno Queima Celulite ativo 500ml', 105.73, 'imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('REAL NATURA DRENO QUEIMA CELULITE ACTIVO 500ml', 'Celulite Ativo é um gel reafirmante e anticelulitico de efeito frio, que ajuda a promover a boa circulação, atenuando significativamente o efeito casca de laranja, promovendo uma pele firme e hidratada.', 'R$ 105,73', 'imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Real Natura Dreno Queima Celulite ativo 500ml', 'Celulite Ativo é um gel reafirmante e anticelulitico de efeito frio, que ajuda a promover a boa circulação, atenuando significativamente o efeito casca de laranja, promovendo uma pele firme e hidratada.', 'R$ 105,73', 'imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 9 -->
             <div class="product">
                 <img src="imagens-catalogo/shampoo-cachos-de-cinema.jpg" alt="Produto 9">
-                <h2>NOVEX SHAMPOO CACHOS DE CINEMA 300ml</h2>
+                <h2>Novex Shampoo Cachos de Cinema 300ml</h2>
                 <p>O Shampoo Novex Meus Cachos de Cinema é enriquecido com puros Óleos de Argan, Coco, Linhaça, Girassol, Abacate e Oliva, proporciona caracóis suaves, brilhantes e cheios de vida.</p>
                 <span>R$ 12,90</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('NOVEX SHAMPOO CACHOS DE CINEMA 300ml', 12.90, 'imagens-catalogo/shampoo-cachos-de-cinema.jpg')">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Novex Shampoo Cachos de Cinema 300ml', 12.90, 'imagens-catalogo/shampoo-cachos-de-cinema.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('NOVEX SHAMPOO CACHOS DE CINEMA 300ml', 'O Shampoo Novex Meus Cachos de Cinema é enriquecido com puros Óleos de Argan, Coco, Linhaça, Girassol, Abacate e Oliva, proporciona caracóis suaves, brilhantes e cheios de vida.', 'R$ 12,90', 'imagens-catalogo/shampoo-cachos-de-cinema.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Novex Shampoo Cachos de Cinema 300ml', 'O Shampoo Novex Meus Cachos de Cinema é enriquecido com puros Óleos de Argan, Coco, Linhaça, Girassol, Abacate e Oliva, proporciona caracóis suaves, brilhantes e cheios de vida.', 'R$ 12,90', 'imagens-catalogo/shampoo-cachos-de-cinema.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 10 -->
             <div class="product">
                 <img src="imagens-catalogo/secador-parlux-superturbo-hp-2400w.jpg" alt="Produto 10">
-                <h2>SECADOR PARLUX SUPERTURBO HP 2400W</h2>
+                <h2>Secador Parlux Superturbo HP 2400w</h2>
                 <p>O secador potente e compacto do mercado.</p>
                 <span>R$ 740,55</span>
-                <button class="add-to-cart" onclick="adicionarAoCarrinho('SECADOR PARLUX SUPERTURBO HP 2400W', 740.55, 'imagens-catalogo/secador-parlux-superturbo-hp-2400w.jpg')">
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Secador Parlux Superturbo HP 2400w', 740.55, 'imagens-catalogo/secador-parlux-superturbo-hp-2400w.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('SECADOR PARLUX SUPERTURBO HP 2400W', 'O secador potente e compacto do mercado. Garantia de 6 meses por ser um produto de uso profissional.', 'R$ 740,55', 'imagens-catalogo/secador-parlux-superturbo-hp-2400w.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Secador Parlux Superturbo HP 2400w', 'O secador potente e compacto do mercado. Garantia de 6 meses por ser um produto de uso profissional.', 'R$ 740,55', 'imagens-catalogo/secador-parlux-superturbo-hp-2400w.jpg')">Ver Detalhes</button>
             </div>
         </section>
     </main>
@@ -183,15 +185,25 @@
 
     <footer>
         <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo Vetor" class="logo">
-        <div class="social-icons">
-            <a href="https://www.instagram.com/filipe_rodrigues07" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=49991525885" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+        <div class="contact-info">
+            <p>
+                <i class="fas fa-map-marker-alt"></i> Av. Barão do Rio Branco, 104 - Sala 603 - Centro, Joaçaba - SC, 89600-000
+            </p>
+            <p>
+                <i class="fas fa-id-card"></i> 47.615.849/0001-33
+            </p>
+            <p>
+                <i class="fas fa-phone-alt"></i> (49) 3522 9014
+            </p>
+            <p>
+                <i class="fab fa-whatsapp"></i> (49) 99110-6297
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i> contato@vetorcrm.com.br
+            </p>
         </div>
         <p>© Copyright vetorCRM. Direitos reservados.</p>
     </footer>
+    <script src="scripts/index.js"></script>
 </body>
 </html>

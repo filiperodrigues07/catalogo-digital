@@ -53,3 +53,28 @@ function atualizarContadorCarrinho() {
 
 // Carregar o contador quando a página carregar
 document.addEventListener('DOMContentLoaded', atualizarContadorCarrinho);
+
+        // Função para filtrar produtos pelo nome
+        function filtrarProdutos() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const produtos = document.getElementsByClassName("product");
+
+            // Loop pelos produtos e exibe/oculta com base na busca
+            for (let i = 0; i < produtos.length; i++) {
+                const nomeProduto = produtos[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+                if (nomeProduto.includes(input)) {
+                    produtos[i].style.display = "block"; // Exibe o produto
+                } else {
+                    produtos[i].style.display = "none"; // Oculta o produto
+                }
+            }
+        }
+
+        // Adiciona evento ao pressionar a tecla Enter no campo de busca
+        document.getElementById("searchInput").addEventListener("keydown", function(event) {
+            // Verifica se a tecla pressionada foi o Enter (código 13 ou "Enter")
+            if (event.key === "Enter") {
+                event.preventDefault(); // Evita o comportamento padrão de enviar formulário (se for um)
+                filtrarProdutos(); // Chama a função de filtro
+            }
+        });
