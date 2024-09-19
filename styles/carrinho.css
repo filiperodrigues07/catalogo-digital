@@ -14,7 +14,7 @@
     
     /* Estilo do cabeçalho */
     header {
-        background-color: #075E54;
+        background-color: #0C4180;
         color: #fff;
         padding: 20px;
         display: flex;
@@ -37,9 +37,10 @@
     /* Estilo para o título */
     header h1 {
         margin: 0;
-        font-size: 24px;
+        font-size: 26px;
         text-align: center; /* Centraliza o título */
         flex-grow: 1; /* Ocupa o espaço restante na linha */
+        margin-right: 190px;
     }
     
     /* Estilo para o carrinho */
@@ -53,7 +54,7 @@
     }
     
     .cart h2 {
-        font-size: 28px;
+        font-size: 24px;
         margin-bottom: 20px;
         color: #333;
     }
@@ -142,14 +143,15 @@
     }
     
     #checkout-button {
-        background-color: #4CAF50;
-        color: white;
+        background-color: #FFDD21;
+        color: rgb(0, 0, 0);
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         font-size: 16px;
         transition: background-color 0.3s ease;
         border-radius: 25px;
+        font-weight: bold;
     }
     
     #checkout-button:hover {
@@ -158,11 +160,11 @@
     
     /* Estilo do rodapé */
     footer {
-        position: relative; /* Posicionamento relativo para o footer */
-        bottom: 0; /* Posiciona o footer na parte inferior da página */
-        width: 100%; /* Define a largura do footer para ocupar toda a página */
-        background-color: #075E54;
-        padding: 30px 20px; /* Aumentei o padding para um espaço mais confortável */
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: #0C4180;
+        padding: 30px 20px; 
         text-align: center;
         color: #f3f3f3;
     }
@@ -214,7 +216,7 @@
     
         /* Estilo do cabeçalho */
         header {
-            background-color: #075E54;
+            background-color: #0C4180;
             color: #fff;
             padding: 20px;
             display: flex;
@@ -238,7 +240,7 @@
         /* Estilo para o título */
         header h1 {
             margin: 0;
-            font-size: 20px; /* Reduz o tamanho do título */
+            font-size: 22px; 
             text-align: center; /* Centraliza o título */
         }
     
@@ -262,7 +264,7 @@
     }
     
     .cart h2 {
-        font-size: 28px;
+        font-size: 24px;
         margin-bottom: 20px;
         color: #333;
     }
@@ -300,19 +302,20 @@
     }
     
     #checkout-button {
-        background-color: #4CAF50;
-        color: white;
+        background-color: #FFDD21;
+        color: rgb(0, 0, 0);
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         font-size: 16px;
         transition: background-color 0.3s ease;
         border-radius: 25px;
+        font-weight: bold;
     }
     
     /* Estilo do rodapé */
     footer {
-        background-color: #075e54;
+        background-color: #0C4180;
         color: rgb(247, 255, 247);
         padding: 20px; /* Aumentei o padding para mais espaço */
         display: flex;
