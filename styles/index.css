@@ -7,23 +7,26 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     text-align: center; /* Centraliza o texto no corpo */
+    padding-top: 83px; /* Adiciona um espaçamento para compensar a altura do header */
 }
 
 /* Estilo do cabeçalho */
 header {
-    background-color: #075e54;
+    background-color: #10519E;
     color: rgb(247, 255, 247);
     padding: 20px;
-    display: flex; /* Use flexbox para o header */
-    align-items: center; /* Centraliza verticalmente os itens */
-    position: relative; /* Para posicionar elementos absolutos */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* Logo no canto esquerdo */
 header .logo {
-    width: 120px; /* Mantém o tamanho original do logo */
-    margin-left: 15px;
-    margin-top: 10px; /* Adiciona uma margem superior para espaçamento */
+    width: 130px; /* Mantém o tamanho original do logo */
+    left: 0;
+    position: fixed;
+    top: 0px;
 }
 
 /* Centralizando o título e a barra de pesquisa */
@@ -39,7 +42,16 @@ header .logo {
 /* Título centralizado no header */
 .title {
     margin: 0; /* Remove margens padrão */
-    font-size: 24px; /* Define o tamanho da fonte do título */
+    font-size: 28px; /* Define o tamanho da fonte do título */
+}
+
+.yellow-bar {
+    background-color: #FFDD21;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
 }
 
 .search-bar {
@@ -47,7 +59,7 @@ header .logo {
     align-items: center;
     width: 100%;
     max-width: 500px;
-    margin: 10px 0;
+    /* margin: 10px 0; */ /* Remova ou ajuste se necessário */
     position: relative;
 }
 
@@ -66,7 +78,7 @@ header .logo {
     top: 50%;
     transform: translateY(-50%); /* Centraliza verticalmente */
     font-size: 16px;
-    color: #ccc; /* Cor da lupa */
+    color: #000000; /* Cor da lupa */
     pointer-events: none; /* Evita que o ícone interfira na interação com o input */
 }
 
@@ -83,11 +95,12 @@ header .logo {
     font-size: 11px;
 }
 
-/* Opções de usuário (login e carrinho) */
+/* Opções do carrinho) */
 .user-options {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espaçamento entre login e carrinho */
+    justify-content: flex-end; /* Alinha o conteúdo para o final do eixo principal */
+    margin-left: auto; /* Empurra o carrinho para a direita */
 }
 
 .user-options a {
@@ -99,8 +112,12 @@ header .logo {
     justify-content: center;
     width: 40px;  /* Largura uniforme para os ícones */
     height: 40px; /* Altura uniforme para os ícones */
-    background-color: #333; /* Fundo dos ícones */
+    background-color: #10519E; /* Fundo dos ícones */
     border-radius: 50%; /* Forma circular */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .user-options a:hover {
@@ -109,14 +126,15 @@ header .logo {
 
 .cart-link {
     position: relative;
+    margin-right: 50px;
 }
 
 #cart-count {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #FFDD21;
+    color: rgb(0, 0, 0);
     font-size: 12px;
     padding: 2px 6px;
     border-radius: 50%;
@@ -152,8 +170,8 @@ header .logo {
 }
 
 .category-nav a.active, .category-nav a:hover {
-    background-color: #075e54;
-    color: white;
+    background-color: #10519E;
+    color: #ffffff;
 }
 
 /* Estilo da seção de produtos */
@@ -198,7 +216,8 @@ header .logo {
     display: block;
     font-size: 1.2em;
     margin: 10px 0;
-    color: #075e54;
+    color: #10519E;
+    font-weight: bold;
 }
 
 .product .add-to-cart, 
@@ -208,8 +227,8 @@ header .logo {
 
 /* Estilo dos botões */
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #10519E;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     font-size: 1em;
@@ -219,7 +238,7 @@ button {
 }
 
 button:hover {
-    background-color: #075e54;
+    background-color: #FFDD21;
 }
 
 /* Ícone de carrinho no botão */
@@ -261,26 +280,28 @@ button:hover .fas.fa-shopping-cart {
 }
 
 .modal img {
-    width: 100%;
+    width: 80%;
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
 .modal h2 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.6em;
 }
 
 .modal p {
     font-size: 1.2em;
     color: #555;
+    text-align: justify;
 }
 
 .modal span {
     display: block;
     font-size: 1.5em;
     margin-top: 10px;
-    color: #075e54;
+    color: #10519E;
+    font-weight: bold;
 }
 
 .modal .close {
@@ -293,7 +314,7 @@ button:hover .fas.fa-shopping-cart {
 
 /* Estilo do rodapé */
 footer {
-    background-color: #075E54;
+    background-color: #10519E;
     padding: 30px 20px; /* Aumentei o padding para um espaço mais confortável */
     text-align: center;
     color: #f3f3f3;
@@ -343,7 +364,7 @@ footer p {
     
     /* Estilo do cabeçalho */
     header {
-        background-color: #075e54;
+        background-color: #10509B;
         color: rgb(247, 255, 247);
         padding: 20px;
         display: flex;
@@ -362,7 +383,7 @@ footer p {
     
     header .logo {
         margin-right: 10px; /* Espaçamento entre as logos */
-        width: 70px; /* Define o tamanho da logo */
+        width: 90px; /* Define o tamanho da logo */
     }
     
     /* Ajuste para manter as duas logos lado a lado */
@@ -380,14 +401,14 @@ footer p {
     
     .user-options a {
         font-size: 24px; /* Tamanho dos ícones */
-        color: #fff; /* Cor dos ícones */
+        color: #ffffff; /* Cor dos ícones */
         text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 40px;  /* Largura uniforme para os ícones */
         height: 40px; /* Altura uniforme para os ícones */
-        background-color: #333; /* Fundo dos ícones */
+        background-color: #10509B; /* Fundo dos ícones */
         border-radius: 50%; /* Forma circular */
     }
     
@@ -427,14 +448,23 @@ footer p {
         padding-bottom: 10px;
     }
     
+    .yellow-bar {
+        background-color: #FFDD21;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    
     /* Barra de pesquisa com ícone de lupa */
     .search-bar {
         display: flex;
         align-items: center;
-        width: 100%;
+        width: 90%;
         max-width: 500px;
         margin: 10px 0;
-        position: relative; /* Para posicionar o ícone de lupa dentro do input */
+        position: relative;
     }
     
     .search-input {
@@ -447,7 +477,7 @@ footer p {
     
     .search-input:focus {
         outline: none; /* Remove a borda azul ao focar */
-        border-color: #4CAF50; /* Cor verde ao focar */
+        border-color: #10509B; /* Cor verde ao focar */
     }
     
     /* Ícone de lupa dentro do input */
@@ -457,7 +487,7 @@ footer p {
         top: 50%;
         transform: translateY(-50%);
         font-size: 16px;
-        color: #ccc; /* Cor do ícone de lupa */
+        color: #000000; /* Cor do ícone de lupa */
         pointer-events: none; /* Não permite interação no ícone */
     }
 
@@ -468,15 +498,6 @@ footer p {
     right: 20px;
     display: flex;
     align-items: center;
-}
-
-/* Ajusta o login */
-.login-link {
-    margin-right: 20px;
-    text-decoration: none;
-    font-size: 14px;
-    color: rgb(247, 255, 247);
-    text-decoration: none;
 }
 
 /* Ajusta o carrinho */
@@ -491,7 +512,7 @@ footer p {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: #4CAF50;
+    background-color: #FFDD21;
     color: white;
     border-radius: 50%;
     padding: 3px 7px;
@@ -520,7 +541,7 @@ footer p {
 
 .category-nav a {
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 0,9em;
     color: #333;
     padding: 10px 20px;
     border-radius: 20px;
@@ -528,7 +549,7 @@ footer p {
 }
 
 .category-nav a.active, .category-nav a:hover {
-    background-color: #075e54;
+    background-color: #10509B;
     color: white;
 }
 
@@ -575,7 +596,8 @@ footer p {
     display: block;
     font-size: 1.1em; /* Reduz o tamanho da fonte do preço */
     margin: 8px 0;
-    color: #075e54;
+    color: #10509B;
+    font-weight: bold;
 }
 
 .product .add-to-cart, 
@@ -585,7 +607,7 @@ footer p {
 
 /* Estilo dos botões */
 button {
-    background-color: #075e54;
+    background-color: #10509B;
     color: white;
     border: none;
     padding: 10px 10px;
@@ -595,7 +617,7 @@ button {
 }
 
 button:hover {
-    background-color: #075e54;
+    background-color: #FFDD21;
 }
 
 /* Ícone de carrinho no botão */
@@ -637,7 +659,7 @@ button:hover .fas.fa-shopping-cart {
 }
 
 .modal img {
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
     margin-bottom: 15px;
 }
@@ -656,7 +678,7 @@ button:hover .fas.fa-shopping-cart {
     display: block;
     font-size: 1.5em;
     margin-top: 10px;
-    color: #075e54;
+    color: #10509B;
 }
 
 .modal .close {
@@ -669,7 +691,7 @@ button:hover .fas.fa-shopping-cart {
 
 /* Estilo do rodapé */
 footer {
-    background-color: #075e54;
+    background-color: #10509B;
     color: rgb(247, 255, 247);
     padding: 20px; /* Aumentei o padding para mais espaço */
     display: flex;
@@ -679,7 +701,7 @@ footer {
 }
 
 footer .logo {
-    width: 150px;
+    width: 90px;
     margin-bottom: 15px; /* Espaçamento adicional entre o logo e o resto do conteúdo */
 }
 
@@ -712,7 +734,7 @@ footer .contact-info {
 
 footer .contact-info p {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     gap: 10px; /* Espaçamento entre o ícone e o texto */

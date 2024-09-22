@@ -14,7 +14,7 @@
     
     /* Estilo do cabeçalho */
     header {
-        background-color: #075E54;
+        background-color: #10519E;
         color: #fff;
         padding: 20px;
         display: flex;
@@ -29,7 +29,7 @@
     }
 
     header .logo {
-        width: 120px;
+        width: 150px;
         margin-right: 20px; /* Espaço entre as logos */
         margin-top: 10px;
     }
@@ -37,9 +37,10 @@
     /* Estilo para o título */
     header h1 {
         margin: 0;
-        font-size: 24px;
+        font-size: 26px;
         text-align: center; /* Centraliza o título */
         flex-grow: 1; /* Ocupa o espaço restante na linha */
+        margin-right: 100px;
     }
     
     /* Estilo para o carrinho */
@@ -53,7 +54,7 @@
     }
     
     .cart h2 {
-        font-size: 28px;
+        font-size: 24px;
         margin-bottom: 20px;
         color: #333;
     }
@@ -91,8 +92,9 @@
     }
     
     .item-details button {
-        background-color: #ff4d4d;
+        background-color: #10519E;
         color: white;
+        font-weight: bold;
         border: none;
         padding: 5px 10px;
         cursor: pointer;
@@ -100,7 +102,7 @@
     }
     
     .item-details button:hover {
-        background-color: #ff3333;
+        background-color: #FFDD21;
     }
     
     /* Controles de quantidade */
@@ -110,7 +112,7 @@
     }
     
     .item-details .quantity-control button {
-        background-color: #4CAF50;
+        background-color: #FFDD21;
         color: #fff;
         border: none;
         padding: 5px 10px;
@@ -118,7 +120,7 @@
     }
     
     .item-details .quantity-control button:hover {
-        background-color: #45a049;
+        background-color: #FFDD21;
     }
     
     .item-details .quantity-control p {
@@ -142,8 +144,9 @@
     }
     
     #checkout-button {
-        background-color: #4CAF50;
+        background-color: #10519E;
         color: white;
+        font-weight: bold;
         border: none;
         padding: 10px 20px;
         cursor: pointer;
@@ -153,7 +156,7 @@
     }
     
     #checkout-button:hover {
-        background-color: #075E54;
+        background-color: #FFDD21;
     }
     
     /* Estilo do rodapé */
@@ -161,7 +164,7 @@
         position: relative; /* Posicionamento relativo para o footer */
         bottom: 0; /* Posiciona o footer na parte inferior da página */
         width: 100%; /* Define a largura do footer para ocupar toda a página */
-        background-color: #075E54;
+        background-color: #10519E;
         padding: 30px 20px; /* Aumentei o padding para um espaço mais confortável */
         text-align: center;
         color: #f3f3f3;
@@ -214,7 +217,7 @@
     
         /* Estilo do cabeçalho */
         header {
-            background-color: #075E54;
+            background-color: #10509B;
             color: #fff;
             padding: 20px;
             display: flex;
@@ -231,14 +234,14 @@
         }
     
         header .logo {
-            width: 80px; /* Ajuste a largura das logos para telas menores */
+            width: 90px; /* Ajuste a largura das logos para telas menores */
             margin-right: 10px; /* Espaço entre as logos */
         }
     
         /* Estilo para o título */
         header h1 {
             margin: 0;
-            font-size: 20px; /* Reduz o tamanho do título */
+            font-size: 26px;
             text-align: center; /* Centraliza o título */
         }
     
@@ -262,7 +265,7 @@
     }
     
     .cart h2 {
-        font-size: 28px;
+        font-size: 22px;
         margin-bottom: 20px;
         color: #333;
     }
@@ -286,11 +289,22 @@
     
     .item-details p {
         font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .item-details button {
+        background-color: #10519E;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
     
     /* Controles de quantidade */
     .item-details .quantity-control p {
-        font-size: 16px;
+        font-size: 18px;
     }
     
     /* Resumo do carrinho */
@@ -300,19 +314,20 @@
     }
     
     #checkout-button {
-        background-color: #4CAF50;
+        background-color: #10509B;
         color: white;
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         font-size: 16px;
+        font-weight: bold;
         transition: background-color 0.3s ease;
         border-radius: 25px;
     }
     
     /* Estilo do rodapé */
     footer {
-        background-color: #075e54;
+        background-color: #10509B;
         color: rgb(247, 255, 247);
         padding: 20px; /* Aumentei o padding para mais espaço */
         display: flex;
@@ -322,7 +337,7 @@
     }
     
     footer .logo {
-        width: 150px;
+        width: 90px;
         margin-bottom: 15px; /* Espaçamento adicional entre o logo e o resto do conteúdo */
     }
     
@@ -336,7 +351,7 @@
     
     footer .social-icons a {
         color: white;
-        font-size: 1.5em;
+        font-size: 1.2em;
         text-decoration: none;
         transition: color 0.3s;
     }
