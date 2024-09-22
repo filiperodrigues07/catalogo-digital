@@ -6,6 +6,7 @@
     <title>Catálogo Digital</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" type="image/x-icon" href="icones/vetor.ico">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
@@ -14,20 +15,11 @@
     <header>
         <!-- Logo -->
     <div class="logo-container">
-        <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo Vetor" class="logo">
-        <img src="imagens-catalogo/logo_CH.png" alt="Logo CH" class="logo">
+        <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo Vetor" class="logo"> <!--logo cliente-->
     </div> 
         <!-- Título -->
         <div class="header-content">
             <h1 class="title">Catálogo Digital</h1>
-    
-            <!-- Barra de Pesquisa -->
-            <div class="search-bar">
-                <i class="search-icon fa fa-search"></i> <!-- Ícone de lupa -->
-                <input type="text" class="search-input" placeholder="Pesquisar..." id="searchInput">
-            </div>
-        </div>
-    
         <!--Carrinho -->
         <div class="user-options">
             <a href="carrinho.html" class="cart-link">
@@ -37,14 +29,22 @@
         </div>
     </header>
 
+        <!-- Barra de Pesquisa -->
+        <div class="yellow-bar">
+            <div class="search-bar">
+            <i class="search-icon fa fa-search"></i> <!-- Ícone de lupa -->
+            <input type="text" class="search-input" placeholder="Pesquisar..." id="searchInput">
+            </div>
+            </div>
+        </div>
     <!-- Barra de Navegação com Categorias -->
     <nav class="category-nav">
         <ul>
             <li><a href="#" class="active" data-category="geral">Página Inicial</a></li>
-            <!--<li><a href="#" data-category="bebidas">Teste 1</a></li>
-            <li><a href="#" data-category="pizzas">Teste 2</a></li>
-            <li><a href="#" data-category="doces">Teste 3</a></li>
-            <li><a href="#" data-category="lanches">Teste 4</a></li>-->
+            <li><a href="#" data-category="">Promoções</a></li>
+            <li><a href="#" data-category="">Shampoo</a></li>
+            <li><a href="#" data-category="">Condicionador</a></li>
+            <li><a href="#" data-category="">Esmaltes</a></li>
         </ul>
     </nav>
 
@@ -185,6 +185,7 @@
 
     <footer>
         <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo Vetor" class="logo">
+        <!--<img src="imagens-catalogo/logo_CH.png" alt="Logo CH" class="logo"> -->
         <div class="contact-info">
             <p>
                 <i class="fas fa-map-marker-alt"></i> Av. Barão do Rio Branco, 104 - Sala 603 - Centro, Joaçaba - SC, 89600-000
