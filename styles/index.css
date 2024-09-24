@@ -444,7 +444,7 @@ footer p {
     /* Título centralizado no header */
     .title {
         margin: 0;
-        font-size: 18px;
+        font-size: 24px;
         padding-bottom: 10px;
     }
     
@@ -491,7 +491,6 @@ footer p {
         pointer-events: none; /* Não permite interação no ícone */
     }
 
-/* Opções de usuário (login e carrinho) no canto superior direito */
 .user-options {
     position: absolute;
     top: 10px;
@@ -525,33 +524,38 @@ footer p {
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
+    overflow-x: auto; /* Adiciona a rolagem horizontal */
+    white-space: nowrap; /* Garante que os itens fiquem em uma única linha */
+    -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos móveis */
 }
 
 .category-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: space-around; /* Distribui os itens igualmente */
+    display: inline-flex; /* Use inline-flex para facilitar a rolagem */
+    justify-content: flex-start; /* Alinha os itens no início */
 }
 
 .category-nav li {
-    display: inline;
+    display: inline-block; /* Garante que os itens fiquem em linha */
 }
 
 .category-nav a {
     text-decoration: none;
-    font-size: 0,9em;
+    font-size: 0.9em; /* Corrige o valor do font-size, pois estava com vírgula */
     color: #333;
     padding: 10px 20px;
     border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Garante que os links sejam "clicáveis" completamente */
 }
 
 .category-nav a.active, .category-nav a:hover {
     background-color: #10509B;
     color: white;
 }
+
 
 /* Estilo da seção de produtos */
 .menu {
