@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Digital</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/index.css">
     <link rel="icon" type="image/x-icon" href="icones/vetor.ico">
     <style>
@@ -37,16 +38,51 @@
             </div>
             </div>
         </div>
-    <!-- Barra de Navegação com Categorias -->
+
+<!-- Barra de Navegação com Categorias -->
     <nav class="category-nav">
         <ul>
             <li><a href="#" data-category="">Página Inicial</a></li>
             <li><a href="#" data-category="">Promoções</a></li>
-            <li><a href="#" data-category="">Shampoo</a></li>
-            <li><a href="#" data-category="">Condicionador</a></li>
+            <li><a href="#" data-category="">Shampoos</a></li>
+            <li><a href="#" data-category="">Condicionadores</a></li>
             <li><a href="#" data-category="">Esmaltes</a></li>
         </ul>
     </nav>
+
+    <!-- Swiper logo abaixo da navegação -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="imagens-banner/funcionalidades.png" alt="Imagem 1">
+        </div>
+        <div class="swiper-slide">
+            <img src="imagens-banner/pix_qrcode.png" alt="Imagem 2">
+        </div>
+        <div class="swiper-slide">
+            <img src="imagens-banner/boleto_api.png" alt="Imagem 3">
+        </div>
+        <div class="swiper-slide">
+            <img src="imagens-banner/chcloud.png" alt="Imagem 4">
+        </div>
+        <div class="swiper-slide">
+            <img src="imagens-banner/imendes.png" alt="Imagem 5">
+        </div>
+        <div class="swiper-slide">
+            <img src="imagens-banner/marketplaces.png" alt="Imagem 6">
+        </div>
+        <div class="swiper-slide">
+            <img src="imagens-banner/pdv_smart.png" alt="Imagem 7">
+        </div>
+        <div class="swiper-slide">
+            <img src="imagens-banner/scanntech.png" alt="Imagem 8">
+        </div>
+        <div class="swiper-slide">
+            <img src="imagens-banner/site_privado.png" alt="Imagem 9">
+        </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
 
     <main>
         <section class="menu">
@@ -203,5 +239,20 @@
         <p>© Copyright vetorCRM. Direitos reservados.</p>
     </footer>
     <script src="scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, // Mostra 1 slide por vez
+            spaceBetween: 10, // Espaçamento entre os slides
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true, // Permite clicar na paginação
+            },
+            autoplay: {
+                delay: 3000, // Tempo entre slides automáticos
+                disableOnInteraction: false, // Continua após interação
+            },
+        });
+      </script>
 </body>
 </html>
