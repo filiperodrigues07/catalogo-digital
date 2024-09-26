@@ -174,6 +174,34 @@ header .logo {
     color: #ffffff;
 }
 
+/* Swiper */
+.swiper {
+    width: 1300px;
+    height: 370px; /* Ajuste a altura do swiper para 700px */
+    margin-top: 10px; /* Distância entre a barra de navegação e o swiper */
+    border-radius: 15px; /* Valor para arredondar as bordas */
+    overflow: hidden; /* Garante que o conteúdo interno não exceda as bordas arredondadas */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background: #ddd; /* Cor de fundo para visualização, remova ou personalize */
+}
+
+.swiper-pagination {
+    bottom: 10px; /* Ajuste a posição da paginação */
+}
+
+/* Ajustar tamanho da imagem para 1300x700 */
+.swiper-slide img {
+    width: 1300px; /* Largura da imagem */
+    height: 370px; /* Altura da imagem */
+    object-fit: cover; /* Ajuste para cobrir o slide sem distorcer a imagem */
+}
+
 /* Estilo da seção de produtos */
 .menu {
     display: flex;
@@ -491,70 +519,97 @@ footer p {
         pointer-events: none; /* Não permite interação no ícone */
     }
 
-.user-options {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-}
+    .user-options {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+    }
 
-/* Ajusta o carrinho */
-.cart-link {
-    position: relative;
-    font-size: 16px;
-    color: rgb(247, 255, 247);
-    text-decoration: none;
-}
+    /* Ajusta o carrinho */
+    .cart-link {
+        position: relative;
+        font-size: 16px;
+        color: rgb(247, 255, 247);
+        text-decoration: none;
+    }
 
-#cart-count {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: #FFDD21;
-    color: white;
-    border-radius: 50%;
-    padding: 3px 7px;
-    font-size: 12px;
-}
+    #cart-count {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #FFDD21;
+        color: white;
+        border-radius: 50%;
+        padding: 3px 7px;
+        font-size: 12px;
+    }
 
-/* Estilo da barra de navegação de categorias */
-.category-nav {
-    background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-    overflow-x: auto; /* Adiciona a rolagem horizontal */
-    white-space: nowrap; /* Garante que os itens fiquem em uma única linha */
-    -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos móveis */
-}
+    /* Estilo da barra de navegação de categorias */
+    .category-nav {
+        background-color: #fff;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        overflow-x: auto; /* Adiciona a rolagem horizontal */
+        white-space: nowrap; /* Garante que os itens fiquem em uma única linha */
+        -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos móveis */
+    }
 
-.category-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: inline-flex; /* Use inline-flex para facilitar a rolagem */
-    justify-content: flex-start; /* Alinha os itens no início */
-}
+    .category-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline-flex; /* Use inline-flex para facilitar a rolagem */
+        justify-content: flex-start; /* Alinha os itens no início */
+    }
 
-.category-nav li {
-    display: inline-block; /* Garante que os itens fiquem em linha */
-}
+    .category-nav li {
+        display: inline-block; /* Garante que os itens fiquem em linha */
+    }
 
-.category-nav a {
-    text-decoration: none;
-    font-size: 0.9em; /* Corrige o valor do font-size, pois estava com vírgula */
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: background-color 0.3s, color 0.3s;
-    display: inline-block; /* Garante que os links sejam "clicáveis" completamente */
-}
+    .category-nav a {
+        text-decoration: none;
+        font-size: 0.9em; /* Corrige o valor do font-size, pois estava com vírgula */
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: background-color 0.3s, color 0.3s;
+        display: inline-block; /* Garante que os links sejam "clicáveis" completamente */
+    }
 
-.category-nav a.active, .category-nav a:hover {
-    background-color: #10509B;
-    color: white;
-}
+    .category-nav a.active, .category-nav a:hover {
+        background-color: #10509B;
+        color: white;
+    }
+
+        /* Swiper */
+    .swiper {
+         width: 100%; /* O swiper ocupará 100% da largura da tela */
+         height: auto; /* A altura será ajustada automaticamente */
+         border-radius: 10px; /* Reduz um pouco o arredondamento para telas menores */
+         margin-top: 15px;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        background: #ddd; /* Cor de fundo para visualização, remova ou personalize */
+    }
+
+    .swiper-pagination {
+        bottom: 10px; /* Ajuste a posição da paginação */
+    }
+
+    /* Ajustar tamanho da imagem para 1300x700 */
+    .swiper-slide img {
+        width: 100%; /* A imagem se ajusta à largura da tela */
+        height: auto; /* A altura será automática para manter a proporção */
+        object-fit: cover; /* Assegura que a imagem mantenha a qualidade, cobrindo o swiper */
+    }
 
 
 /* Estilo da seção de produtos */
