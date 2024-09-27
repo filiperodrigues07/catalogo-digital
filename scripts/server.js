@@ -1,5 +1,5 @@
 const express = require('express');
-const pg = require('pg'); // Importe o módulo pg
+const pg = require('pg');
 const app = express();
 
 // Configurações do banco de dados
@@ -22,7 +22,7 @@ pool.query('SELECT NOW()', (err, result) => {
     console.log('Data e hora do servidor:', result.rows[0].now);
 });
 
-// Rotas do servidor (exemplos)
+
 app.get('/produtos', (req, res) => {
     pool.query('SELECT * FROM produtos', (err, results) => {
         if (err) {
@@ -41,17 +41,17 @@ app.post('/adicionar-produto', (req, res) => {
     // ... outros campos
 
     // Inserir o produto no banco de dados
-    pool.query('INSERT INTO produtos (nome, preco, ...) VALUES ($1, $2, ...)', [nome, preco, ...], (err, results) => {
-        if (err) {
-            console.error('Erro ao inserir o produto:', err);
-            res.status(500).send('Erro ao inserir o produto');
-            return;
-        }
-        res.send('Produto inserido com sucesso!');
-    });
-});
+    //pool.query('INSERT INTO produtos (nome, preco, ...) VALUES ($1, $2, ...)', [nome, preco, ...], (err, results) => {
+        //if (err) {
+            //console.error('Erro ao inserir o produto:', err);
+           // res.status(500).send('Erro ao inserir o produto');
+           // return;
+       // }
+        //res.send('Produto inserido com sucesso!');
+    //});
+//});
 
 // Iniciar o servidor
-app.listen(3000, () => {
+//app.listen(3000, () => {
     console.log('Servidor iniciado em http://localhost:3000');
 });
