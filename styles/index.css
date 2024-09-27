@@ -1,6 +1,10 @@
 /* Estilos gerais para desktop */
 @media only screen and (min-width: 1024px) {
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Saira, sans-serif;
     margin: 0;
@@ -9,7 +13,6 @@ body {
     text-align: center; /* Centraliza o texto no corpo */
     padding-top: 83px; /* Adiciona um espaçamento para compensar a altura do header */
 }
-
 /* Estilo do cabeçalho */
 header {
     background-color: #10519E;
@@ -382,6 +385,11 @@ footer p {
 
 /* Estilos gerais para celulares */
 @media only screen and (max-width: 768px) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+    
     body {
         font-family: Saira, sans-serif;
         margin: 0;
