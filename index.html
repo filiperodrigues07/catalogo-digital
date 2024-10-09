@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/index.css">
     <link rel="icon" type="image/x-icon" href="icones/vetor.ico">
+    <meta name="theme-color" content="#10519E">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
@@ -16,7 +17,7 @@
     <header>
         <!-- Logo -->
     <div class="logo-container">
-        <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo Vetor" class="logo"> <!--logo cliente-->
+        <img src="logos/logo_vetorCRM.png" alt="Logo Vetor" class="logo"> <!--logo cliente-->
     </div> 
         <!-- Título -->
         <div class="header-content">
@@ -44,9 +45,9 @@
         <ul>
             <li><a href="#" data-category="">Página Inicial</a></li>
             <li><a href="#" data-category="">Promoções</a></li>
-            <li><a href="#" data-category="">Shampoos</a></li>
-            <li><a href="#" data-category="">Condicionadores</a></li>
-            <li><a href="#" data-category="">Esmaltes</a></li>
+            <li><a href="#" data-category="">Cabelo</a></li>
+            <li><a href="#" data-category="">Corpo</a></li>
+            <li><a href="#" data-category="">Aparelhos</a></li>
         </ul>
     </nav>
 
@@ -131,7 +132,7 @@
                 <button class="add-to-cart" onclick="adicionarAoCarrinho('Bioextratus Shampoo Bio Mais Liso 350ml', 52.90 , 'imagens-catalogo/bio-mais-liso-shampoo.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>                
-                <button class="ver-detalhes" onclick="abrirModal('Bioextratus Shampoo Bio Mais Liso 350ml', 'Limpeza Eficaz. Sem adição de sal, promove uma limpeza eficaz sem ressecar os cabelos. Perfeito para uso diário. Alinha os fios, deixando-os mais lisos, leves e com muito brilho.' , 'R$ 52,90' , 'imagens-catalogo/bio-mais-liso-shampoo.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Bioextratus Shampoo Bio Mais Liso 350ml', 'Limpeza Eficaz. Sem adição de sal, promove uma limpeza eficaz sem ressecar os cabelos.' , 'R$ 52,90' , 'imagens-catalogo/bio-mais-liso-shampoo.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 2 -->
@@ -143,19 +144,19 @@
                 <button class="add-to-cart" onclick="adicionarAoCarrinho('Bioextratus Loção Força com Pimenta 100ml', 44.03, 'imagens-catalogo/bio-pimenta.jpg' )">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Bioextratus Loção Força com Pimenta 100ml', 'Dá Brilho e Vitalidade ao cabelo.Tem, em sua fórmula concentrada, micronutrientes essenciais e o poder de reconstrução da microqueratina. Age da raiz às pontas, devolvendo o brilho e a vitalidade aos cabelos.', 'R$ 44,03', 'imagens-catalogo/bio-pimenta.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Bioextratus Loção Força com Pimenta 100ml', 'Dá brilho e vitalidade, com micronutrientes essenciais e microqueratina para reconstrução dos fios, agindo da raiz às pontas.', 'R$ 44,03', 'imagens-catalogo/bio-pimenta.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 3 -->
             <div class="product">
                 <img src="imagens-catalogo/condicionador-meus-cachos.jpg" alt="Produto 3">
                 <h2>Novex Condicionador Meus Cachos 300ml</h2>
-                <p>O Condicionador Novex Meus Cachos está indicado para os cabelos encaracolados e hidrata, ajudando a definir os caracóis por mais tempo.</p>
+                <p>O Condicionador Novex Meus Cachos hidrata e define os cabelos encaracolados por mais tempo.</p>
                 <span>R$ 18,90</span>
                 <button class="add-to-cart" onclick="adicionarAoCarrinho('Novex Condicionador Meus Cachos 300ml', 18.90, 'imagens-catalogo/condicionador-meus-cachos.jpg' )">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Novex Condicionador Meus Cachos 300ml', 'O Condicionador Novex Meus Cachos está indicado para os cabelos encaracolados e hidrata, ajudando a definir os caracóis por mais tempo.', 'R$ 18,90', 'imagens-catalogo/condicionador-meus-cachos.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Novex Condicionador Meus Cachos 300ml', 'O Condicionador Novex Meus Cachos hidrata e define os cabelos encaracolados por mais tempo.', 'R$ 18,90', 'imagens-catalogo/condicionador-meus-cachos.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 4 -->
@@ -174,12 +175,12 @@
             <div class="product">
                 <img src="imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg" alt="Produto 5">
                 <h2>Novex Shampoo Afro Hair 300ml</h2>
-                <p>Enriquecido com Argan e D-Pantenol, o Kit Champô e Condicionador Estilo Afrohair proporciona hidratação e brilho prolongado. Os caracóis ficam macios, hidratados e sem pontas espigadas.</p>
+                <p>O Kit Shampoo e Condicionador Estilo Afrohair, com Argan e D-Pantenol, hidrata, dá brilho e suaviza os caracóis, evitando pontas espigadas.</p>
                 <span>R$ 36,99</span>
                 <button class="add-to-cart" onclick="adicionarAoCarrinho('Novex Shampoo Afro Hair 300ml', 36.99, 'imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Novex Shampoo Afro Hair 300ml', 'Enriquecido com Argan e D-Pantenol, o Kit Champô e Condicionador Estilo Afrohair proporciona hidratação e brilho prolongado. Os caracóis ficam macios, hidratados e sem pontas espigadas.', 'R$ 36,99', 'imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Novex Shampoo Afro Hair 300ml', 'O Kit Shampoo e Condicionador Estilo Afrohair, com Argan e D-Pantenol, hidrata, dá brilho e suaviza os caracóis, evitando pontas espigadas.', 'R$ 36,99', 'imagens-catalogo/kit-shampoo-e-condicionador-afro-hair.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 6 -->
@@ -191,7 +192,7 @@
                 <button class="add-to-cart" onclick="adicionarAoCarrinho('Prancha Ultra Slim Pro', 392.82, 'imagens-catalogo/prancha-ultra-slim-pro.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Prancha Ultra Slim Pro', 'Prancha profissional UltraSlimPro de design ultra fino. Cabo rotativo 360º, placas titanium, deslizamento super suave, ajuste digital da temperatura, estabilizador da temperatura. Ideal para tratamentos de queratina e alisamentos com escova progressiva. A resistência autocontrola-se. Tem como função manter a temperatura constante através da reposição do calor', 'R$ 329,82', 'imagens-catalogo/prancha-ultra-slim-pro.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Prancha Ultra Slim Pro','A Prancha Ultra Slim Pro é profissional com design ultra fino, cabo rotativo 360º, placas de titanium, ajuste digital e estabilizador de temperatura. Ideal para tratamentos de queratina e alisamentos progressivos.', 'R$ 329,82', 'imagens-catalogo/prancha-ultra-slim-pro.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 7 -->
@@ -210,12 +211,12 @@
             <div class="product">
                 <img src="imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg" alt="Produto 8">
                 <h2>Real Natura Dreno Queima Celulite ativo 500ml</h2>
-                <p>Celulite Ativo é um gel reafirmante e anticelulitico de efeito frio, que ajuda a promover a boa circulação, atenuando significativamente o efeito casca de laranja, promovendo uma pele firme e hidratada.</p>
+                <p>Celulite Ativo é um gel reafirmante e anticelulitico de efeito frio, que ajuda a promover a boa circulação.</p>
                 <span>R$ 105,73</span>
                 <button class="add-to-cart" onclick="adicionarAoCarrinho('Real Natura Dreno Queima Celulite ativo 500ml', 105.73, 'imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg')">
                     <i class="fas fa-plus"></i> <!-- Ícone de + -->
                 </button>
-                <button class="ver-detalhes" onclick="abrirModal('Real Natura Dreno Queima Celulite ativo 500ml', 'Celulite Ativo é um gel reafirmante e anticelulitico de efeito frio, que ajuda a promover a boa circulação, atenuando significativamente o efeito casca de laranja, promovendo uma pele firme e hidratada.', 'R$ 105,73', 'imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg')">Ver Detalhes</button>
+                <button class="ver-detalhes" onclick="abrirModal('Real Natura Dreno Queima Celulite ativo 500ml', 'Real Natura Dreno Queima Celulite Ativo 500ml é um gel reafirmante anticelulite de efeito frio, que melhora a circulação, reduz o aspecto casca de laranja e deixa a pele firme e hidratada.', 'R$ 105,73', 'imagens-catalogo/real-natura-dreno-queima-celulite-activo-500ml.jpg')">Ver Detalhes</button>
             </div>
 
             <!-- Produto 9 -->
@@ -241,6 +242,126 @@
                 </button>
                 <button class="ver-detalhes" onclick="abrirModal('Secador Parlux Superturbo HP 2400w', 'O secador potente e compacto do mercado. Garantia de 6 meses por ser um produto de uso profissional.', 'R$ 740,55', 'imagens-catalogo/secador-parlux-superturbo-hp-2400w.jpg')">Ver Detalhes</button>
             </div>
+
+            <!-- Produto 11 -->
+            <div class="product">
+                <img src="imagens-catalogo/prancha-babyliss-extra-fina.jpg" alt="Produto 11">
+                <h2>Prancha Babyliss extra fina</h2>
+                <p>Alta resistência ao desgaste e temperatura.</p>
+                <span>R$ 561,80</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Prancha Babyliss extra fina', 561.80 , 'imagens-catalogo/prancha-babyliss-extra-fina.jpg')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>                
+                <button class="ver-detalhes" onclick="abrirModal('Prancha Babyliss extra fina', 'Alta resistência ao desgaste e temperatura.' , 'R$ 561,80' , 'imagens-catalogo/prancha-babyliss-extra-fina.jpg')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 12 -->
+            <div class="product">
+                <img src="imagens-catalogo/secador-wahl-super-dry.jpg" alt="Produto 12">
+                <h2>Secador Wahl Super Dry</h2>
+                <p>Turmalina avançada gera íons negativos e calor infravermelho suave.</p>
+                <span>R$ 227,37</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Secador Wahl Super Dry', 227.37, 'imagens-catalogo/secador-wahl-super-dry.jpg' )">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Secador Wahl Super Dry', 'Turmalina avançada gera íons negativos e calor infravermelho suave.', 'R$ 227,37', 'imagens-catalogo/secador-wahl-super-dry.jpg')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 13 -->
+            <div class="product">
+                <img src="imagens-catalogo/real-natura-creme-de-rosto-baba-de-caracol-e-rosa-mosqueta-50ml.jpg" alt="Produto 13">
+                <h2>Real Natura Creme de Rosto</h2>
+                <p>Anti-rugas com baba de caracol, rosa mosqueta e colágeno.</p>
+                <span>R$ 61,48</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Real Natura Creme de Rosto', 61.48, 'imagens-catalogo/real-natura-creme-de-rosto-baba-de-caracol-e-rosa-mosqueta-50ml.jpg' )">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Real Natura Creme de Rosto', 'Anti-rugas com baba de caracol, rosa mosqueta e colágeno.', 'R$ 61,48', 'imagens-catalogo/real-natura-creme-de-rosto-baba-de-caracol-e-rosa-mosqueta-50ml.jpg')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 14 -->
+            <div class="product">
+                <img src="imagens-catalogo/creme-de-pentear-milagre.jpg" alt="Produto 14">
+                <h2>Lola Creme de Pentear Milagre 450g</h2>
+                <p>Facilita o desembaraço e hidratação diária.</p>
+                <span>R$ 50,46</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Lola Creme de Pentear Milagre 450g', 50.46, 'imagens-catalogo/creme-de-pentear-milagre.jpg')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Lola Creme de Pentear Milagre 450g', 'Facilita o desembaraço e hidratação diária.', 'R$ 50,46', 'imagens-catalogo/creme-de-pentear-milagre.jpg')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 15 -->
+            <div class="product">
+                <img src="imagens-catalogo/haskell-mandioca-kit.jpg" alt="Produto 15">
+                <h2>Haskell Mandioca - Kit</h2>
+                <p>Auxilia no crescimento e hidratação dos cabelos.</p>
+                <span>R$ 323,41</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Haskell Mandioca - Kit', 323.41, 'imagens-catalogo/haskell-mandioca-kit.jpg')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Haskell Mandioca - Kit', 'Auxilia no crescimento e hidratação dos cabelos.', 'R$ 323,41', 'imagens-catalogo/haskell-mandioca-kit.jpg')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 16 -->
+            <div class="product">
+                <img src="imagens-catalogo/geleia-bendita-ghee.jpg" alt="Produto 16">
+                <h2>Lola Bemdita Ghee Geleia 200ml</h2>
+                <p>Geleia capilar nutritiva.</p>
+                <span>R$ 44,94</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Lola Bemdita Ghee Geleia 200ml', 44.94, 'imagens-catalogo/geleia-bendita-ghee.jpg')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Lola Bemdita Ghee Geleia 200ml', 'Geleia capilar nutritiva.', 'R$ 44,94', 'imagens-catalogo/geleia-bendita-ghee.jpg')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 17 -->
+            <div class="product">
+                <img src="imagens-catalogo/shampoo-pos-progressiva-haskell.jpg" alt="Produto 17">
+                <h2>Haskell Pós Progressiva Shampoo 300ml</h2>
+                <p>Prolonga o efeito liso e hidrata o cabelo.</p>
+                <span>R$ 51,52</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Haskell Pós Progressiva Shampoo 300ml', 51.52, 'imagens-catalogo/shampoo-pos-progressiva-haskell.jpg')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Haskell Pós Progressiva Shampoo 300ml', 'Prolonga o efeito liso e hidrata o cabelo.', 'R$ 51,52', 'imagens-catalogo/shampoo-pos-progressiva-haskell.jpg')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 18 -->
+            <div class="product">
+                <img src="imagens-catalogo/vintage-girls-lola.jpg" alt="Produto 18">
+                <h2>Lola Vintage Girls Creme Alisante 830g</h2>
+                <p>Alisamento para todos os tipos de cabelo.</p>
+                <span>R$ 148,40</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Lola Vintage Girls Creme Alisante 830g', 148.40, 'imagens-catalogo/vintage-girls-lola.jpg')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Lola Vintage Girls Creme Alisante 830g', 'Alisamento para todos os tipos de cabelo.', 'R$ 148,40', 'imagens-catalogo/vintage-girls-lola.jpg')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 19 -->
+            <div class="product">
+                <img src="imagens-catalogo/hair-life-cacho-e-natural.jpg" alt="Produto 19">
+                <h2>Novex Hair Life Cacho e Natural</h2>
+                <p>Define caracóis para cabelos crespos.</p>
+                <span>R$ 40,55</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Novex Hair Life Cacho e Natural', 40.55, 'imagens-catalogo/hair-life-cacho-e-natural.jpg')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Novex Hair Life Cacho e Natural', 'Define caracóis para cabelos crespos.', 'R$ 40,55', 'imagens-catalogo/hair-life-cacho-e-natural.jpg')">Ver Detalhes</button>
+            </div>
+
+            <!-- Produto 20 -->
+            <div class="product">
+                <img src="imagens-catalogo/rapunzel.jpg" alt="Produto 20">
+                <h2>Lola Rapunzel Tónico 250ml</h2>
+                <p>Reduz queda e estimula o crescimento capilar.</p>
+                <span>R$ 49,18</span>
+                <button class="add-to-cart" onclick="adicionarAoCarrinho('Lola Rapunzel Tónico 250ml', 49.18, 'imagens-catalogo/rapunzel.jpg')">
+                    <i class="fas fa-plus"></i> <!-- Ícone de + -->
+                </button>
+                <button class="ver-detalhes" onclick="abrirModal('Lola Rapunzel Tónico 250ml', 'Reduz queda e estimula o crescimento capilar.', 'R$ 49,18', 'imagens-catalogo/rapunzel.jpg')">Ver Detalhes</button>
+            </div>
         </section>
     </main>
 
@@ -256,8 +377,8 @@
     </div>
 
     <footer>
-        <img src="imagens-catalogo/VETORCRM_BRANCO.png" alt="Logo Vetor" class="logo">
-        <!--<img src="imagens-catalogo/logo_CH" alt="Logo CH" class="logo"> -->
+        <img src="logos/logo_vetorCRM.png" alt="Logo Vetor" class="logo">
+        <img src="logos/logo_CH.png" alt="Logo CH" class="logo">
         <div class="contact-info">
             <p>
                 <i class="fas fa-map-marker-alt"></i> Av. Barão do Rio Branco, 104 - Sala 603 - Centro, Joaçaba - SC.
@@ -289,6 +410,6 @@
                 disableOnInteraction: false, // Continua após interação
             },
         });
-      </script>
+    </script>
 </body>
 </html>

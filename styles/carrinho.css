@@ -20,6 +20,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: fixed; /* Define a posição como fixed */
+        top: 0; /* Posiciona na parte superior da tela */
+        width: 100%; /* Define a largura para ocupar toda a tela */
+        z-index: 1000; /* Define o nível de empilhamento do cabeçalho */
     }
 
     /* Estilos para as logos */
@@ -51,6 +55,7 @@
         padding: 20px;
         background-color: #fff;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 200px;
     }
     
     .cart h2 {
@@ -70,8 +75,8 @@
     }
     
     .cart-item img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
         margin-right: 20px;
     }
@@ -99,6 +104,7 @@
         padding: 5px 10px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        border-radius: 25px;
     }
     
     .item-details button:hover {
@@ -161,43 +167,50 @@
     
     /* Estilo do rodapé */
     footer {
-        position: relative; /* Posicionamento relativo para o footer */
-        bottom: 0; /* Posiciona o footer na parte inferior da página */
-        width: 100%; /* Define a largura do footer para ocupar toda a página */
         background-color: #10519E;
-        padding: 30px 20px; /* Aumentei o padding para um espaço mais confortável */
+        padding: 30px 20px; /* Espaçamento mais confortável */
         text-align: center;
         color: #f3f3f3;
+        position: relative; /* Define a posição relativa */
+        bottom: 0; /* Posiciona na parte inferior da tela */
+        left: 0; /* Posiciona na borda esquerda */
+        width: 100%; /* Define a largura para ocupar toda a tela */
     }
 
-    .content {
-        flex-grow: 1; /* O conteúdo irá ocupar o espaço restante */
-    }
-
+    /* Ajuste para as logos */
     footer .logo {
         width: 150px;
-        margin-bottom: 20px; /* Aumentei o espaçamento inferior */
+        margin-bottom: 20px; /* Espaçamento inferior aumentado */
+        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5)); /* Adiciona sombra para destacar */
+        transition: transform 0.3s ease-in-out; /* Animação suave para hover */
     }
 
+    /* Efeito de aumento ao passar o mouse nas logos */
+    footer .logo:hover {
+        transform: scale(1.1);
+    }
+
+    /* Informação de contato */
     footer .contact-info {
         margin-bottom: 20px; /* Espaço entre os contatos e o resto do conteúdo */
     }
 
     footer .contact-info p {
-        margin: 5px 0; /* Reduzi o espaçamento entre os itens de contato */
+        margin: 5px 0; /* Espaçamento reduzido entre os itens de contato */
         font-size: 16px;
         color: #f8f6f6;
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: left; /* Para alinhar o texto à esquerda */
-        gap: 10px; /* Criei um gap entre o ícone e o texto */
+        text-align: left; /* Alinhamento do texto à esquerda */
+        gap: 10px; /* Espaçamento entre o ícone e o texto */
     }
 
     footer .contact-info i {
-        font-size: 18px;
+        font-size: 18px; /* Tamanho do ícone */
     }
 
+    /* Parágrafos do rodapé */
     footer p {
         margin: 15px 0 0;
         font-size: 14px;

@@ -55,6 +55,8 @@ header .logo {
     align-items: center;
     width: 100%;
     justify-content: center;
+    position: fixed;
+    z-index: 1000;
 }
 
 .search-bar {
@@ -148,7 +150,7 @@ header .logo {
     background-color: #fff;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
+    margin-top: 60px;
 }
 
 .category-nav ul {
@@ -346,39 +348,50 @@ button:hover .fas.fa-shopping-cart {
 /* Estilo do rodapé */
 footer {
     background-color: #10519E;
-    padding: 30px 20px; /* Aumentei o padding para um espaço mais confortável */
+    padding: 30px 20px; /* Espaçamento mais confortável */
     text-align: center;
     color: #f3f3f3;
 }
 
+/* Ajuste para as logos */
 footer .logo {
     width: 150px;
-    margin-bottom: 20px; /* Aumentei o espaçamento inferior */
+    margin-bottom: 20px; /* Espaçamento inferior aumentado */
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5)); /* Adiciona sombra para destacar */
+    transition: transform 0.3s ease-in-out; /* Animação suave para hover */
 }
 
+/* Efeito de aumento ao passar o mouse nas logos */
+footer .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Informação de contato */
 footer .contact-info {
     margin-bottom: 20px; /* Espaço entre os contatos e o resto do conteúdo */
 }
 
 footer .contact-info p {
-    margin: 5px 0; /* Reduzi o espaçamento entre os itens de contato */
+    margin: 5px 0; /* Espaçamento reduzido entre os itens de contato */
     font-size: 16px;
     color: #f8f6f6;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left; /* Para alinhar o texto à esquerda */
-    gap: 10px; /* Criei um gap entre o ícone e o texto */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    gap: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
 footer .contact-info i {
-    font-size: 18px;
+    font-size: 18px; /* Tamanho do ícone */
 }
 
+/* Parágrafos do rodapé */
 footer p {
     margin: 15px 0 0;
     font-size: 14px;
 }
+
 
     }
 
@@ -760,24 +773,34 @@ button:hover .fas.fa-shopping-cart {
 footer {
     background-color: #10509B;
     color: rgb(247, 255, 247);
-    padding: 20px; /* Aumentei o padding para mais espaço */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column; /* Alinha o conteúdo em duas linhas */
+    flex-direction: column; /* Inicialmente em coluna */
+}
+
+/* Estilo para as logos */
+footer .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaço entre as logos */
+    margin-bottom: 15px;
 }
 
 footer .logo {
     width: 90px;
-    margin-bottom: 15px; /* Espaçamento adicional entre o logo e o resto do conteúdo */
+    margin-bottom: 0; /* Remove espaçamento adicional entre as logos */
 }
 
+/* Ícones sociais */
 footer .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 15px; /* Ajustei o espaço entre os ícones e o conteúdo */
-    width: 100%; 
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 footer .social-icons a {
@@ -791,12 +814,13 @@ footer .social-icons a:hover {
     color: #ddd;
 }
 
+/* Informação de contato */
 footer .contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Espaço entre os itens de contato */
-    margin-bottom: 15px; /* Espaçamento entre os contatos e o texto de direitos reservados */
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 footer .contact-info p {
@@ -804,7 +828,7 @@ footer .contact-info p {
     font-size: 12px;
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    gap: 10px;
     color: rgb(247, 255, 247);
 }
 
@@ -812,6 +836,7 @@ footer .contact-info i {
     font-size: 18px;
 }
 
+/* Parágrafo do rodapé */
 footer p {
     margin: 0;
     text-align: center;
