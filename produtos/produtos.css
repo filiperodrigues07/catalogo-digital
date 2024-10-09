@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.preco {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.desconto {
+    color: #999;
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+.produto-info {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.produto-img {
+    width: 350px;
+    position: relative;
+}
+
+.carousel {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.produto-descricao {
+    flex: 1;
+}
+
+.produto-descricao p {
+    margin-bottom: 15px;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.quantidade label {
+    margin-right: 10px;
+}
+
+.btn-comprar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #10519E;
+    padding: 30px 20px; /* Aumentei o padding para um espaço mais confortável */
+    text-align: center;
+    color: #f3f3f3;
+}
+
+footer .logo {
+    width: 150px;
+    margin-bottom: 20px; /* Aumentei o espaçamento inferior */
+}
+
+footer .contact-info {
+    margin-bottom: 20px; /* Espaço entre os contatos e o resto do conteúdo */
+}
+
+footer .contact-info p {
+    margin: 5px 0; /* Reduzi o espaçamento entre os itens de contato */
+    font-size: 16px;
+    color: #f8f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* Para alinhar o texto à esquerda */
+    gap: 10px; /* Criei um gap entre o ícone e o texto */
+}
+
+footer .contact-info i {
+    font-size: 18px;
+}
+
+footer p {
+    margin: 15px 0 0;
+    font-size: 14px;
+}
