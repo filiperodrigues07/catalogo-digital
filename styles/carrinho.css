@@ -16,7 +16,7 @@
     header {
         background-color: #10519E;
         color: #fff;
-        padding: 20px;
+        padding: 10px; /* Diminui o padding para reduzir a altura */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -45,6 +45,37 @@
         text-align: center; /* Centraliza o título */
         flex-grow: 1; /* Ocupa o espaço restante na linha */
         margin-right: 100px;
+    }
+
+    /* Estilos para o carrinho */
+    header .cart-container {
+        display: flex;
+        align-items: center; /* Alinha verticalmente */
+    }
+
+    header .cart-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    header .cart-count {
+        background-color: #FFDD21;
+        color: #10519E;
+        border-radius: 50%;
+        padding: 5px 10px;
+        font-weight: bold;
+    }
+
+    /* Estilo da barra amarela */
+    .yellow-bar {
+        background-color: #FFDD21;
+        height: 45px; /* Define a altura da barra */
+        width: 100%;
+        position: fixed;
+        top: 120px; /* Posiciona abaixo do header, considerando a altura reduzida */
+        z-index: 1000; /* Define o nível de empilhamento da barra */
+        right: 0.5px;
     }
     
     /* Estilo para o carrinho */
