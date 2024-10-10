@@ -150,7 +150,10 @@ header .logo {
     background-color: #fff;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 60px;
+    position: fixed; /* Mantém a barra fixa */
+    top: 140px; /* Posiciona a barra abaixo do header */
+    width: 100%;
+    z-index: 1000; /* Garante que a barra fique sobre outros elementos */
 }
 
 .category-nav ul {
@@ -182,10 +185,11 @@ header .logo {
 /* Swiper */
 .swiper {
     width: 1300px;
-    height: 370px; /* Ajuste a altura do swiper para 700px */
+    height: 370px;
     margin-top: 10px; /* Distância entre a barra de navegação e o swiper */
     border-radius: 15px; /* Valor para arredondar as bordas */
-    overflow: hidden; /* Garante que o conteúdo interno não exceda as bordas arredondadas */
+    overflow: hidden;
+    margin-top: 130px;
 }
 
 .swiper-slide {
