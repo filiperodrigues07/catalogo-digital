@@ -26,7 +26,7 @@ header {
 
 /* Logo no canto esquerdo */
 header .logo {
-    width: 130px; /* Mantém o tamanho original do logo */
+    width: 130px;
     left: 0;
     position: fixed;
     top: 0px;
@@ -229,7 +229,7 @@ header .logo {
     padding: 15px;
     text-align: center;
     cursor: pointer;
-    display: flex;
+    display: none; /* teste */
     flex-direction: column; /* Alinha os itens do produto verticalmente */
     align-items: center; /* Centraliza os itens horizontalmente */
 }
@@ -303,7 +303,7 @@ button:hover .fas.fa-shopping-cart {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .modal-content {

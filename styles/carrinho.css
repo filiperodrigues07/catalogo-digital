@@ -33,8 +33,7 @@
     }
 
     header .logo {
-        width: 150px;
-        margin-right: 20px; /* Espaço entre as logos */
+        width: 130px;
         margin-top: 10px;
     }
 
@@ -73,7 +72,7 @@
         height: 45px; /* Define a altura da barra */
         width: 100%;
         position: fixed;
-        top: 120px; /* Posiciona abaixo do header, considerando a altura reduzida */
+        top: 110px; /* Posiciona abaixo do header, considerando a altura reduzida */
         z-index: 1000; /* Define o nível de empilhamento da barra */
         right: 0.5px;
     }

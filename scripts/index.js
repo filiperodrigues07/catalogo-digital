@@ -78,3 +78,30 @@ document.addEventListener('DOMContentLoaded', atualizarContadorCarrinho);
                 filtrarProdutos(); // Chama a função de filtro
             }
         });
+
+        // Função para mostrar ou ocultar categorias
+        function mostrarCategoria(categoria) {
+            const categorias = document.querySelectorAll('.product');
+            categorias.forEach(cat => {
+                if (categoria === 'Página Inicial' || cat.dataset.category === categoria) {
+                    cat.style.display = 'block';
+                } else {
+                    cat.style.display = 'none';
+                }
+            });
+        }
+
+        // Adiciona evento de clique aos links da navegação
+        const linksCategoria = document.querySelectorAll('.category-nav li a');
+        linksCategoria.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const categoria = this.dataset.category;
+                mostrarCategoria(categoria);
+            });
+        });
+
+        // Mostrar todos os produtos por padrão
+        window.onload = () => {
+            mostrarCategoria('Página Inicial'); // Mostrar todos os produtos
+        };  
