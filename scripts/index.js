@@ -31,25 +31,86 @@ window.onclick = function(event) {
 
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-function adicionarAoCarrinho(produto, preco, imagem) {
+//nova função para adicionar os produtos no carrinho
+function adicionarAoCarrinho(produto, preco, imagem, delta = 1) {
+    // Recupera o carrinho do localStorage ou inicializa um array vazio
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
     // Verificar se o produto já existe no carrinho
     const produtoExistente = carrinho.find(item => item.nome === produto);
 
     if (produtoExistente) {
-        produtoExistente.quantidade++;
+        // Ajustar a quantidade com base no delta
+        produtoExistente.quantidade += delta;
+
+        // Se a quantidade for menor ou igual a 0, remover o produto do carrinho
+        if (produtoExistente.quantidade <= 0) {
+            carrinho = carrinho.filter(item => item.nome !== produto);
+        }
     } else {
-        carrinho.push({ nome: produto, preco: preco, imagem: imagem, quantidade: 1 });
+        // Se delta for positivo e o produto não existir, adicionar ao carrinho
+        if (delta > 0) {
+            carrinho.push({ nome: produto, preco: preco, imagem: imagem, quantidade: delta });
+        }
     }
 
+    // Atualiza o localStorage com o carrinho atualizado
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+    // Atualiza o contador do carrinho e a quantidade exibida na página
+    atualizarContadorCarrinho();
+
+    atualizarQuantidadeNaPagina(produto);  // Função para atualizar a quantidade visível
+    
+    exibirCarrinho();
+}
+
+// Função para atualizar a quantidade visível na página
+function atualizarQuantidadeNaPagina(produto) {
+    // Recupera o carrinho do localStorage
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    // Encontra o item no carrinho
+    const produtoExistente = carrinho.find(item => item.nome === produto);
+
+    // Encontra o elemento HTML que exibe a quantidade para esse produto
+    const quantidadeElemento = document.querySelector(`[data-produto="${produto}"] .quantidade`);
+
+    // Atualiza a quantidade visível na interface
+    if (produtoExistente) {
+        quantidadeElemento.textContent = produtoExistente.quantidade;
+    } else {
+        quantidadeElemento.textContent = 0;  // Se o produto foi removido, exibe 0
+    }
+}
+
+// Função para atualizar o contador total do carrinho
+function atualizarContadorCarrinho() {
+    // Recupera o carrinho do localStorage
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    // Soma o total de itens no carrinho
+    let totalItens = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
+
+    // Atualiza o elemento do contador na interface (caso tenha um contador geral do carrinho)
+    document.getElementById('cart-count').textContent = totalItens;
+}
+
+// Função para carregar os valores iniciais quando a página carrega
+function carregarCarrinhoNaPagina() {
+    // Recupera o carrinho do localStorage
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    // Atualiza a quantidade de cada produto na página
+    carrinho.forEach(item => {
+        atualizarQuantidadeNaPagina(item.nome);
+    });
+
+    // Atualiza o contador geral do carrinho
     atualizarContadorCarrinho();
 }
 
-// Atualizar o contador de itens no carrinho
-function atualizarContadorCarrinho() {
-    let contador = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
-    document.getElementById('cart-count').textContent = contador;
-}
+window.onload = carregarCarrinhoNaPagina;
 
 // Carregar o contador quando a página carregar
 document.addEventListener('DOMContentLoaded', atualizarContadorCarrinho);
@@ -104,4 +165,4 @@ document.addEventListener('DOMContentLoaded', atualizarContadorCarrinho);
         // Mostrar todos os produtos por padrão
         window.onload = () => {
             mostrarCategoria('Página Inicial'); // Mostrar todos os produtos
-        };  
+        };
