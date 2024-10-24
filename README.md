@@ -14,7 +14,7 @@ Você pode acessar uma demonstração do projeto no seguinte link:
 - Interface responsiva para diferentes dispositivos (computadores, tablets e smartphones).
 - Informações detalhadas de cada produto, como nome, descrição e preço.
 - Facilidade para adicionar e gerenciar novos produtos.
-- **Integração com o [Vetor CRM](https://www.vetorcrm.com/)** para envio e comunicação direta via WhatsApp.
+- **Integração com o [Vetor CRM](https://www.vetorcrm.com.br/)** para envio e comunicação direta via WhatsApp.
 - **Integração com o sistema ERP [CH Sistemas](https://www.chsistemas.com.br/)** para sincronização e gerenciamento de dados de estoque e produtos.
 
 ## Tecnologias Utilizadas
