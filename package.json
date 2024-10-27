@@ -1,0 +1,16 @@
+{
+  "name": "catalogo-digital",
+  "version": "1.0.0",
+  "description": "Este é um projeto de **Catálogo Digital**, desenvolvido para facilitar a navegação e visualização de produtos em um formato digital. O objetivo do projeto é criar uma interface amigável e eficiente para gerenciar e exibir produtos de forma dinâmica e acessível.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "pg": "^8.13.1"
+  }
+}

@@ -260,31 +260,33 @@ header .logo {
 
 /* Contêiner dos botões de adicionar e remover */
 .product .quantity-controls {
-    display: flex;
-    justify-content: center;  /* Centraliza os botões e a quantidade horizontalmente */
-    align-items: center;      /* Garante que os itens estejam alinhados verticalmente */
-    gap: 10px;                /* Espaçamento entre os botões */
+    display: flex;                /* Centraliza os botões horizontalmente */
+    justify-content: center;
+    align-items: center;          /* Centraliza verticalmente */
+    gap: 10px;                    /* Espaçamento entre os botões e a quantidade */
 }
 
 .product .quantity-controls button {
-    background-color: #0056b3; /* Cor de fundo dos botões */
-    border: none;              /* Remove a borda padrão */
-    color: white;              /* Cor do texto */
-    padding: 10px 15px;        /* Espaçamento interno dos botões */
-    font-size: 18px;           /* Tamanho da fonte */
-    line-height: 1;            /* Garante que o texto ou ícone dentro do botão esteja centralizado */
-    cursor: pointer;           /* Muda o cursor para pointer ao passar sobre o botão */
-    border-radius: 5px;        /* Bordas arredondadas */
-    display: flex;             /* Faz com que o conteúdo interno do botão use flexbox */
-    justify-content: center;   /* Centraliza o conteúdo horizontalmente */
-    align-items: center;       /* Centraliza o conteúdo verticalmente */
+    background-color: #0065b3;    /* Cor de fundo dos botões */
+    border: none;                 /* Remove a borda padrão */
+    color: white;                 /* Cor do texto */
+    width: 40px;                  /* Define largura fixa */
+    height: 40px;                 /* Define altura fixa */
+    font-size: 18px;              /* Tamanho da fonte */
+    display: flex;                /* Usar flexbox para centralização */
+    justify-content: flex-start;  /* Alinha o conteúdo à esquerda */
+    align-items: center;          /* Centraliza verticalmente */
+    padding-left: 12px;           /* Adiciona espaço à esquerda para empurrar o conteúdo à direita */
+    cursor: pointer;              /* Muda o cursor ao passar sobre o botão */
+    border-radius: 5px;           /* Bordas arredondadas */
 }
 
 .product .quantity-controls .quantidade {
-    font-size: 18px;           /* Tamanho da fonte da quantidade */
-    padding: 0 10px;           /* Espaçamento ao redor do número */
-    line-height: 1;            /* Garante que o número esteja corretamente alinhado verticalmente */
+    font-size: 18px;              /* Tamanho da fonte da quantidade */
+    padding: 0 10px;              /* Espaçamento ao redor do número */
+    line-height: 1;               /* Garante que o número esteja corretamente alinhado verticalmente */
 }
+
 
 /* Estilo dos botões */
 button {
