@@ -161,3 +161,25 @@ function removerItem(index) {
 
 // Certifique-se de que exibirCarrinho() é chamado quando o documento estiver pronto
 document.addEventListener('DOMContentLoaded', exibirCarrinho);
+
+// Formulario de pedido
+function abrirFormulario() {
+    document.getElementById("modal-form").style.display = "flex";
+}
+
+function fecharFormulario() {
+    document.getElementById("modal-form").style.display = "none";
+}
+
+function enviarPedido() {
+    const nome = document.getElementById('nome').value;
+    const endereco = document.getElementById('endereco').value;
+    const email = document.getElementById('email').value;
+    const telefone = document.getElementById('telefone').value;
+    const cpf = document.getElementById('cpf').value;
+
+    console.log("Pedido enviado:", { nome, endereco, email, telefone, cpf });
+
+    fecharFormulario();
+
+}
