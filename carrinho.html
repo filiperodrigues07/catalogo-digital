@@ -31,13 +31,29 @@
             </div>
             <div class="cart-summary">
                 <h3>Total: <span id="cart-total">R$ 0,00</span></h3>
-                <button id="checkout-button">Enviar pedido</button>
+                <button id="checkout-button" onclick="abrirFormulario()">Enviar pedido</button>
             </div>
         </section>
     </main>
 
     <div id="cart-items">
         <!-- Os produtos serão listados aqui dinamicamente -->
+    </div>
+
+    <!-- Modal para o formulário -->
+    <div id="modal-form" class="modal">
+        <div class="modal-content">
+            <h2>Preencha seus dados</h2>
+            <form id="pedidoForm">
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="endereco" placeholder="Endereço" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="telefone" placeholder="Telefone" required>
+                <input type="text" id="cpf" placeholder="CPF" required>
+                <button type="button" class="submit-button" onclick="enviarPedido()">Enviar Pedido</button>
+            </form>
+            <button class="close-button" onclick="fecharFormulario()">Cancelar</button>
+        </div>
     </div>
         
     <script>
