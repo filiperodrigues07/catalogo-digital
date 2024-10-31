@@ -41,18 +41,18 @@
     </div>
 
     <!-- Modal para o formulário -->
-    <div id="modal-form" class="modal">
+    <div id="modal-form" class="modal" onclick="fecharAoClicarFora(event)">
         <div class="modal-content">
+            <span class="close-icon" onclick="fecharFormulario()">&times;</span>
             <h2>Preencha seus dados</h2>
             <form id="pedidoForm">
                 <input type="text" id="nome" placeholder="Nome" required>
                 <input type="text" id="endereco" placeholder="Endereço" required>
                 <input type="email" id="email" placeholder="Email" required>
-                <input type="tel" id="telefone" placeholder="Telefone" required>
-                <input type="text" id="cpf" placeholder="CPF" required>
+                <input type="tel" id="telefone" placeholder="Telefone" oninput="mascaraTelefone(event)" required>
+                <input type="text" id="cpf" placeholder="CPF" oninput="mascaraCPF(event)" required>
                 <button type="button" class="submit-button" onclick="enviarPedido()">Enviar Pedido</button>
             </form>
-            <button class="close-button" onclick="fecharFormulario()">Cancelar</button>
         </div>
     </div>
         

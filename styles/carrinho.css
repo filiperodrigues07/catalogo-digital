@@ -209,124 +209,155 @@
     z-index: 1000;
 }
 
+/* Estilo do conteúdo do modal */
 .modal-content {
     background-color: #fff;
-    padding: 30px;
+    padding: 25px;
     border-radius: 10px;
     width: 90%;
-    max-width: 500px;
+    max-width: 450px;
     text-align: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Título do formulário */
 .modal-content h2 {
     margin-top: 0;
     color: #333;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
+/* Formulário */
 .modal-content form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Campos de entrada */
 .modal-content input {
     padding: 12px;
     font-size: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 8px;
     width: 100%;
-    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
+    background-color: #f9f9f9;
 }
 
+/* Estilo de foco nos campos de entrada */
 .modal-content input:focus {
-    border-color: #007bff; /* Cor de destaque ao focar no campo */
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    background-color: #fff;
 }
 
-.close-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 1em;
+/* Botão de fechar (ícone X) */
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
     cursor: pointer;
-    border-radius: 8px;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.close-button:hover {
-    background-color: #c82333;
+.close-icon:hover {
+    color: #333;
 }
 
+/* Botão de enviar */
 .submit-button {
-    background-color: #28a745;
+    background-color: #10519E;
     color: white;
     border: none;
     padding: 12px;
     font-size: 1em;
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
 }
 
+/* Hover e animação no botão */
 .submit-button:hover {
-    background-color: #218838;
+    background-color: #FFDD21;
+    transform: translateY(-2px);
+}
+
+/* Sombra no botão de envio */
+.submit-button:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
 }
 
     
-    /* Estilo do rodapé */
-    footer {
-        background-color: #10519E;
-        padding: 30px 20px; /* Espaçamento mais confortável */
-        text-align: center;
-        color: #f3f3f3;
-        position: relative; /* Define a posição relativa */
-        bottom: 0; /* Posiciona na parte inferior da tela */
-        left: 0; /* Posiciona na borda esquerda */
-        width: 100%; /* Define a largura para ocupar toda a tela */
-    }
+  /* Estilo do rodapé */
+footer {
+    background-color: #10519E;
+    padding: 30px 20px; /* Espaçamento mais confortável */
+    text-align: center;
+    color: #f3f3f3;
+    width: 100%; /* Define a largura para ocupar toda a tela */
+    position: relative; /* Deixa o footer no fluxo do conteúdo */
+}
 
-    /* Ajuste para as logos */
-    footer .logo {
-        width: 150px;
-        margin-bottom: 20px; /* Espaçamento inferior aumentado */
-        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5)); /* Adiciona sombra para destacar */
-        transition: transform 0.3s ease-in-out; /* Animação suave para hover */
-    }
+/* Ajuste para as logos */
+footer .logo {
+    width: 150px;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease-in-out;
+}
 
-    /* Efeito de aumento ao passar o mouse nas logos */
-    footer .logo:hover {
-        transform: scale(1.1);
-    }
+/* Efeito de aumento ao passar o mouse nas logos */
+footer .logo:hover {
+    transform: scale(1.1);
+}
 
-    /* Informação de contato */
-    footer .contact-info {
-        margin-bottom: 20px; /* Espaço entre os contatos e o resto do conteúdo */
-    }
+/* Informação de contato */
+footer .contact-info {
+    margin-bottom: 20px;
+}
 
-    footer .contact-info p {
-        margin: 5px 0; /* Espaçamento reduzido entre os itens de contato */
-        font-size: 16px;
-        color: #f8f6f6;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: left; /* Alinhamento do texto à esquerda */
-        gap: 10px; /* Espaçamento entre o ícone e o texto */
-    }
+footer .contact-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #f8f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
-    footer .contact-info i {
-        font-size: 18px; /* Tamanho do ícone */
-    }
+footer .contact-info i {
+    font-size: 18px;
+}
 
-    /* Parágrafos do rodapé */
-    footer p {
-        margin: 15px 0 0;
-        font-size: 14px;
-    }
+/* Parágrafos do rodapé */
+footer p {
+    margin: 15px 0 0;
+    font-size: 14px;
+}
+
+/* Adiciona espaço na parte inferior do conteúdo principal para o footer */
+.main-content {
+    padding-bottom: 80px; /* Ajuste a altura para corresponder ao footer */
+}
+
 }
 
 /* Estilos gerais para celulares */
@@ -448,6 +479,115 @@
         transition: background-color 0.3s ease;
         border-radius: 25px;
     }
+
+    /* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Título do formulário */
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Formulário */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Campos de entrada */
+.modal-content input {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+/* Estilo de foco nos campos de entrada */
+.modal-content input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    background-color: #fff;
+}
+
+/* Botão de fechar (ícone X) */
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-icon:hover {
+    color: #333;
+}
+
+/* Botão de enviar */
+.submit-button {
+    background-color: #10519E;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+/* Hover e animação no botão */
+.submit-button:hover {
+    background-color: #FFDD21;
+    transform: translateY(-2px);
+}
+
+/* Sombra no botão de envio */
+.submit-button:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
+}
 
     /* Estilo do rodapé */
     footer {
