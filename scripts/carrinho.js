@@ -159,27 +159,121 @@ function removerItem(index) {
     exibirCarrinho(); // Chame exibirCarrinho() para atualizar o valor total e a lista
 }
 
-// Certifique-se de que exibirCarrinho() é chamado quando o documento estiver pronto
+
 document.addEventListener('DOMContentLoaded', exibirCarrinho);
 
-// Formulario de pedido
+
+// Função para abrir o modal
 function abrirFormulario() {
     document.getElementById("modal-form").style.display = "flex";
 }
 
+// Função para fechar o modal
 function fecharFormulario() {
     document.getElementById("modal-form").style.display = "none";
 }
 
+// Função para fechar ao clicar fora do modal
+function fecharAoClicarFora(event) {
+    const modalContent = document.querySelector(".modal-content");
+    if (!modalContent.contains(event.target)) {
+        fecharFormulario();
+    }
+}
+
+// Aplica máscara no campo de telefone
+function mascaraTelefone(event) {
+    const input = event.target;
+    let telefone = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+    // Formato: (XX) XXXXX-XXXX
+    if (telefone.length > 10) {
+        telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else {
+        telefone = telefone.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    }
+
+    input.value = telefone;
+}
+
+// Aplica máscara no campo de CPF
+function mascaraCPF(event) {
+    const input = event.target;
+    let cpf = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+    // Formato: XXX.XXX.XXX-XX
+    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+    cpf = cpf.replace(/(\d{3})(\d{2})$/, "$1-$2");
+
+    input.value = cpf;
+}
+
+// Função para validar e enviar o pedido
 function enviarPedido() {
-    const nome = document.getElementById('nome').value;
-    const endereco = document.getElementById('endereco').value;
-    const email = document.getElementById('email').value;
-    const telefone = document.getElementById('telefone').value;
-    const cpf = document.getElementById('cpf').value;
+    const nome = document.getElementById('nome').value.trim();
+    const endereco = document.getElementById('endereco').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const cpf = document.getElementById('cpf').value.trim();
+
+    if (!nome || !endereco || !email || !telefone || !cpf) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+        alert("Por favor, insira um email válido.");
+        return;
+    }
+
+    const telefonePattern = /^\(\d{2}\)\s?\d{4,5}-\d{4}$/;
+    if (!telefonePattern.test(telefone)) {
+        alert("Por favor, insira um telefone válido no formato (XX) XXXXX-XXXX.");
+        return;
+    }
+
+    const cpfPattern = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+    if (!cpfPattern.test(cpf)) {
+        alert("Por favor, insira um CPF válido no formato XXX.XXX.XXX-XX.");
+        return;
+    }
 
     console.log("Pedido enviado:", { nome, endereco, email, telefone, cpf });
-
+    alert("Pedido enviado com sucesso!");
     fecharFormulario();
 
+    const cartItems = [
+        { produto_id: 1, quantidade: 2 },
+        { produto_id: 2, quantidade: 1 }
+        // Exemplo, você deve preencher isso com os itens reais do carrinho
+    ];
+
+    const dados = {
+        nome,
+        endereco,
+        email,
+        telefone,
+        cpf,
+        itens: cartItems // Inclui os itens do carrinho no corpo da requisição
+    };
+
+    fetch('http://localhost:3000/enviar-pedido', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro na requisição: ' + response.status);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data.message); // Mensagem de sucesso
+    })
+    .catch(error => console.error('Erro:', error));
 }
