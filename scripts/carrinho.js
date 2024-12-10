@@ -196,28 +196,36 @@ function mascaraTelefone(event) {
     input.value = telefone;
 }
 
-// Aplica máscara no campo de CPF
-function mascaraCPF(event) {
+// Aplica máscara no campo de CPF ou CNPJ
+function mascaraCpfCnpj(event) {
     const input = event.target;
-    let cpf = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    let value = input.value.replace(/\D/g, '');
 
-    // Formato: XXX.XXX.XXX-XX
-    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
-    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
-    cpf = cpf.replace(/(\d{3})(\d{2})$/, "$1-$2");
+    if (value.length <= 11) {
+        // CPF: XXX.XXX.XXX-XX
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d{2})$/, "$1-$2");
+    } else {
+        // CNPJ: XX.XXX.XXX/XXXX-XX
+        value = value.replace(/(\d{2})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d)/, "$1/$2");
+        value = value.replace(/(\d{4})(\d{2})$/, "$1-$2");
+    }
 
-    input.value = cpf;
+    input.value = value;
 }
+
 
 // Função para validar e enviar o pedido
 function enviarPedido() {
     const nome = document.getElementById('nome').value.trim();
-    const endereco = document.getElementById('endereco').value.trim();
     const email = document.getElementById('email').value.trim();
     const telefone = document.getElementById('telefone').value.trim();
-    const cpf = document.getElementById('cpf').value.trim();
+    const cpf = document.getElementById('cpfCnpj').value.trim();
 
-    if (!nome || !endereco || !email || !telefone || !cpf) {
+    if (!nome || !email || !telefone || !cpf) {
         alert("Por favor, preencha todos os campos.");
         return;
     }
@@ -240,7 +248,7 @@ function enviarPedido() {
         return;
     }
 
-    console.log("Pedido enviado:", { nome, endereco, email, telefone, cpf });
+    console.log("Pedido enviado:", { nome, email, telefone, cpf });
     alert("Pedido enviado com sucesso!");
     fecharFormulario();
 
@@ -252,7 +260,6 @@ function enviarPedido() {
 
     const dados = {
         nome,
-        endereco,
         email,
         telefone,
         cpf,

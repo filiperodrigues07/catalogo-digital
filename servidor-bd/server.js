@@ -12,9 +12,9 @@ app.use(bodyParser.json());
 const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
-  database: 'catalogo_digital',
-  password: 'admin',
-  port: 5435,
+  database: 'vetorcrm',
+  password: '3001',
+  port: 5432,
 });
 
 // Teste de conexão com o banco de dados
