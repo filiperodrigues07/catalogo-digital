@@ -73,7 +73,7 @@ app.post('/enviar-pedido', async (req, res) => {
 
       // Insere o cliente e recupera o `cliente_id`
       const clienteResult = await pool.query(
-          `INSERT INTO clientes (nome, endereco, email, telefone, cpf) 
+          `INSERT INTO clientes (nome, email, telefone, cpf) 
           VALUES ($1, $2, $3, $4, $5) RETURNING id`,
           [nome, endereco, email, telefone, cpf]
       );

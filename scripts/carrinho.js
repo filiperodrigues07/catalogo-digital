@@ -217,6 +217,11 @@ function mascaraCpfCnpj(event) {
     input.value = value;
 }
 
+function validarNome() {
+    const nomeInput = document.getElementById("nome");
+    nomeInput.value = nomeInput.value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, '');
+}
+
 
 // Função para validar e enviar o pedido
 function enviarPedido() {

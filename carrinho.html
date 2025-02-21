@@ -46,7 +46,7 @@
             <span class="close-icon" onclick="fecharFormulario()">&times;</span>
             <h2>Preencha seus dados</h2>
             <form id="pedidoForm">
-                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="nome" placeholder="Nome" oninput="validarNome()" required>
                 <input type="email" id="email" placeholder="Email" required>
                 <input type="tel" id="telefone" placeholder="Telefone" oninput="mascaraTelefone(event)" required>
                 <input type="text" id="cpfCnpj" placeholder="CPF/CNPJ" oninput="mascaraCpfCnpj(event)" required>
