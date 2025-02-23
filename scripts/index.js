@@ -31,13 +31,13 @@ window.onclick = function(event) {
 
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-//nova função para adicionar os produtos no carrinho
+// Função para adicionar os produtos no carrinho
 function adicionarAoCarrinho(produto, preco, imagem, delta = 1) {
     // Recupera o carrinho do localStorage ou inicializa um array vazio
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
     // Verificar se o produto já existe no carrinho
-    const produtoExistente = carrinho.find(item => item.nome === produto);
+    let produtoExistente = carrinho.find(item => item.nome === produto);
 
     if (produtoExistente) {
         // Ajustar a quantidade com base no delta
@@ -47,11 +47,9 @@ function adicionarAoCarrinho(produto, preco, imagem, delta = 1) {
         if (produtoExistente.quantidade <= 0) {
             carrinho = carrinho.filter(item => item.nome !== produto);
         }
-    } else {
+    } else if (delta > 0) {
         // Se delta for positivo e o produto não existir, adicionar ao carrinho
-        if (delta > 0) {
-            carrinho.push({ nome: produto, preco: preco, imagem: imagem, quantidade: delta });
-        }
+        carrinho.push({ nome: produto, preco, imagem, quantidade: delta });
     }
 
     // Atualiza o localStorage com o carrinho atualizado
@@ -59,11 +57,25 @@ function adicionarAoCarrinho(produto, preco, imagem, delta = 1) {
 
     // Atualiza o contador do carrinho e a quantidade exibida na página
     atualizarContadorCarrinho();
-
-    atualizarQuantidadeNaPagina(produto);  // Função para atualizar a quantidade visível
-    
+    atualizarQuantidadeNaPagina(produto); // Atualiza a quantidade visível
     exibirCarrinho();
 }
+
+// Função para carregar as quantidades dos produtos ao iniciar a página
+function carregarQuantidadesDoCarrinho() {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    carrinho.forEach(produto => {
+        let quantidadeElemento = document.querySelector(`.product[data-produto="${CSS.escape(produto.nome)}"] .quantidade`);
+        if (quantidadeElemento) {
+            quantidadeElemento.textContent = produto.quantidade;
+        }
+    });
+}
+
+// Chamar a função ao carregar a página
+document.addEventListener("DOMContentLoaded", carregarQuantidadesDoCarrinho);
+
 
 // Função para atualizar a quantidade visível na página
 function atualizarQuantidadeNaPagina(produto) {
@@ -75,6 +87,8 @@ function atualizarQuantidadeNaPagina(produto) {
 
     // Encontra o elemento HTML que exibe a quantidade para esse produto
     const quantidadeElemento = document.querySelector(`[data-produto="${produto}"] .quantidade`);
+
+    console.log("Produto recebido:", produto);
 
     // Atualiza a quantidade visível na interface
     if (produtoExistente) {
